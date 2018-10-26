@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Pas" size="0.800000 0.600000" />
+    <ImageTarget name="Vand" size="0.040000 0.040086" />
+    <ImageTarget name="Six_Of_Spades" size="0.060000 0.042760" />
+  </Tracking>
+</QCARConfig>
