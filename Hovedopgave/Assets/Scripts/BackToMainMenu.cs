@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Vuforia;
 
-public class MainMenuButton_Pose : MonoBehaviour {
+public class BackToMainMenu : MonoBehaviour {
 
     public void changemenuscene()
     {
-        VuforiaBehaviour.Instance.enabled = true;
-        SceneManager.LoadScene("PoseScene");
+        VuforiaBehaviour.Instance.enabled = false;
+        SceneManager.LoadScene("MainMenuScene");
     }
 }
