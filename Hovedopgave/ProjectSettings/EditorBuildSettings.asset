@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PoseScene.unity
     guid: 0ae9d11ce601c3f4d9ac54ef8db52401
+  - enabled: 1
+    path: Assets/Scenes/AboutUsScene.unity
+    guid: e65bfb8e047a23c4ab032527956ccff7
   m_configObjects: {}

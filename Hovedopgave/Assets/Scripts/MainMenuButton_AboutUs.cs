@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Vuforia;
 
-public class BackToMainMenu : MonoBehaviour {
+public class MainMenuButton_AboutUs : MonoBehaviour {
 
     public void changemenuscene()
     {
-        SceneManager.LoadScene("MainMenuScene");
+        SceneManager.LoadScene("AboutUsScene");
     }
 }

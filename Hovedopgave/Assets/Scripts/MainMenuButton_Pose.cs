@@ -8,7 +8,6 @@ public class MainMenuButton_Pose : MonoBehaviour {
 
     public void changemenuscene()
     {
-        VuforiaBehaviour.Instance.enabled = true;
         SceneManager.LoadScene("PoseScene");
     }
 }

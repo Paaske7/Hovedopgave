@@ -9,7 +9,6 @@ public class MainMenuButton_ClothScanner : MonoBehaviour {
 
 	public void changemenuscene()
     {
-        VuforiaBehaviour.Instance.enabled = true;
         SceneManager.LoadScene("ScanClothScene");
     }
 }
