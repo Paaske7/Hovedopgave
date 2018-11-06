@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Database : MonoBehaviour
 {
-    private readonly string connectionString = @"Data Source=sql.itcn.dk\EADANIA;Initial Catalog=jona711p.EADANIA;Persist Security Info=True;User ID=jona711p.EADANIA;Password=7DG6ckH8c0";
+    private readonly string connectionString = "Data Source=.;Initial Catalog = Clothing; Integrated Security = True" ;
     SqlConnection connection = null;
 
 
@@ -17,11 +17,12 @@ public class Database : MonoBehaviour
     public List<Cloth> GetClothList()
     {
         Connection();
+      
 
         List<Cloth> ClothList = new List<Cloth>();
         DataTable dataTable = new DataTable();
 
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Clothing where Name = 'Something?'", connection);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Cloths Series where Name = 'T-Shirt'", connection);
             connection.Open();
             adapter.Fill(dataTable);
             connection.Close();
@@ -33,12 +34,13 @@ public class Database : MonoBehaviour
                 new Cloth
                 {
                     Name = cloth["Name"].ToString(),
-                    Price = cloth["Price"].ToString(),
-                    Description = cloth["Description"].ToString(),
-                    Quality = cloth["Quality"].ToString(),
-                    Quality2 = cloth["Quality2"].ToString(),
+                    //Price = cloth["Price"].ToString(),
+                    //Description = cloth["Description"].ToString(),
+                    //Quality = cloth["Quality"].ToString(),
+                    //Quality2 = cloth["Quality2"].ToString(),
 
                 });
+            
         }
 
         foreach (Cloth Clothing in ClothList)
