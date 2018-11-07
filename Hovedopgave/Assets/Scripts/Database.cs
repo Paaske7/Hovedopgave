@@ -18,7 +18,7 @@ public class Database : MonoBehaviour
     SqlConnection connection = null;
 
 
-    private void Connection()
+    void Connection()
     {
         connection = new SqlConnection(connectionString);
     }
