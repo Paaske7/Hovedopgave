@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenUrl : MonoBehaviour {
+public class OpenUrl_Pas : MonoBehaviour {
 
     public void OpenURL()
     {

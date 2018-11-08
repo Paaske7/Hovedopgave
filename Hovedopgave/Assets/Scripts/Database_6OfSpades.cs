@@ -3,7 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using UnityEngine;
 
-public class Database : MonoBehaviour
+public class Database_6OfSpades : MonoBehaviour
 {
 
     private string connectionString = @"Data Source = tcp:hovedopgave.database.windows.net,1433; 
@@ -21,17 +21,18 @@ public class Database : MonoBehaviour
     void Connection()
     {
         connection = new SqlConnection(connectionString);
+        Debug.Log("Database - Connection");
     }
 
     public List<Cloth> GetClothList()
     {
         Connection();
-      
+        Debug.Log("Database - Get ClothList");
 
         List<Cloth> ClothList = new List<Cloth>();
         DataTable dataTable = new DataTable();
 
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Cloths where Name = 'T-Shirt'", connection);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Cloths where Name = 'Sweatshirt med motiv'", connection);
         Debug.Log("Prøver at oprette forbindelse");
             connection.Open();
         Debug.Log("Forbindelse oprettet");
@@ -45,10 +46,11 @@ public class Database : MonoBehaviour
                 new Cloth
                 {
                     Name = cloth["Name"].ToString(),
-                    //Price = cloth["Price"].ToString(),
-                    //Description = cloth["Description"].ToString(),
-                    //Quality = cloth["Quality"].ToString(),
-                    //Quality2 = cloth["Quality2"].ToString(),
+                    Price = cloth["Price"].ToString(),
+                    Description = cloth["Description"].ToString(),
+                    Quality = cloth["Quality"].ToString(),
+                    Quality2 = cloth["Quality2"].ToString(),
+                    URL = cloth["URL"].ToString()
 
                 });
             
