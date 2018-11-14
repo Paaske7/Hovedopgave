@@ -32,7 +32,7 @@ public class Database_Pas : MonoBehaviour
         List<Cloth> ClothList = new List<Cloth>();
         DataTable dataTable = new DataTable();
 
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Cloths where Name = 'Jacquardstrikket trøje'", connection);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Cloths where Name = 'lemon curry kjole'", connection);
         Debug.Log("Prøver at oprette forbindelse");
             connection.Open();
         Debug.Log("Forbindelse oprettet");
