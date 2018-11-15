@@ -26,13 +26,14 @@ public class Database_6OfSpades : MonoBehaviour
 
     public List<Cloth> GetClothList()
     {
+        string name = "Jacquardstrikket trøje";
         Connection();
         Debug.Log("Database - Get ClothList");
 
         List<Cloth> ClothList = new List<Cloth>();
         DataTable dataTable = new DataTable();
 
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Cloths where Name = 'Sweatshirt med motiv'", connection);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Cloths where Name = '" + name + "'", connection);
         Debug.Log("Prøver at oprette forbindelse");
             connection.Open();
         Debug.Log("Forbindelse oprettet");
