@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using Vuforia;
 
 public class MainMenuButton_AboutUs : MonoBehaviour {
-
+    // Mikael Paaske
     public void changemenuscene()
     {
         SceneManager.LoadScene("AboutUsScene");

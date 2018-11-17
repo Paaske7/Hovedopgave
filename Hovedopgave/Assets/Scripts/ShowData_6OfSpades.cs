@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ShowData_6OfSpades : MonoBehaviour
 {
-
+    // Mikael Paaske
     public Text nameTextField;
     public Text PriceTextField;
     public Text DescriptionTextField;

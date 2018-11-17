@@ -6,8 +6,8 @@ using Vuforia;
 
 public class MainMenuButton_ClothScanner : MonoBehaviour {
 
-
-	public void changemenuscene()
+    // Mikael Paaske
+    public void changemenuscene()
     {
         SceneManager.LoadScene("ScanClothScene");
     }

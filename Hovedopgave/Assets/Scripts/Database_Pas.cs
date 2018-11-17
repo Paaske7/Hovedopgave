@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Database_Pas : MonoBehaviour
 {
-
+    // Mikael Paaske
     private string connectionString = @"Data Source = tcp:hovedopgave.database.windows.net,1433; 
      user id = Mikael;
      password = Paaske77;
