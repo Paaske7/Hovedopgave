@@ -13,27 +13,30 @@ public class ShowData_Pas : MonoBehaviour
     public Text Quality2TextField;
     //public Text URLTextField;
     private Database_Pas DB;
-    // Use this for initialization
-    void Start()
+
+ 
+    //void Awake()
+    //{
+    //    nameTextField = GetComponent<Text>();
+    //}
+    public void CallDatabase()
     {
-        Debug.Log("ShowData - Start");
-        
-
-
-        List<Cloth> clothlist;
-        clothlist = DB.GetClothList();
-
-        nameTextField.text = clothlist[0].Name;
-        PriceTextField.text = clothlist[0].Price;
-        DescriptionTextField.text = clothlist[0].Description;
-        QualityTextField.text = clothlist[0].Quality;
-        Quality2TextField.text = clothlist[0].Quality2;
-        //URLTextField.text = clothlist[0].URL;
-        Debug.Log("ShowData - End");
-    }
-    void CallDatabase() {
         {
-            DB = GameObject.Find("DatabaseHandler").GetComponent<Database_Pas>(); // Denne der skal kaldes før at tekstfelter bliver "låst op". 
+            DB = GameObject.Find("DatabaseHandler").GetComponent<Database_Pas>();
+            List<Cloth> clothlist;
+            clothlist = DB.GetClothList();
+
+            nameTextField = GameObject.Find("Name").GetComponent<Text>();
+
+            nameTextField.text = clothlist[0].Name; 
+            PriceTextField.text = clothlist[0].Price;
+            DescriptionTextField.text = clothlist[0].Description;
+            QualityTextField.text = clothlist[0].Quality;
+            Quality2TextField.text = clothlist[0].Quality2;
+            //URLTextField.text = clothlist[0].URL;
+
+            Debug.Log("ShowData - End");
         }
     }
+
 }

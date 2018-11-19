@@ -8,6 +8,7 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
     // Mikael Paaske
     #region PROTECTED_MEMBER_VARIABLES
     protected TrackableBehaviour mTrackableBehaviour;
+    ShowData_Pas showData_Pas = new ShowData_Pas();
     protected TrackableBehaviour.Status m_PreviousStatus;
     protected TrackableBehaviour.Status m_NewStatus;
 
@@ -37,11 +38,14 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
     ///     tracking state changes.
     /// </summary>
     public void OnTrackableStateChanged(
+
         TrackableBehaviour.Status previousStatus,
         TrackableBehaviour.Status newStatus)
     {
         m_PreviousStatus = previousStatus;
         m_NewStatus = newStatus;
+
+     
 
         if (newStatus == TrackableBehaviour.Status.DETECTED ||
             newStatus == TrackableBehaviour.Status.TRACKED ||
@@ -87,7 +91,9 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
         foreach (var component in canvasComponents)
             component.enabled = true;
 
-       // showdata.LetsGo();
+        Debug.Log("Calling Database");
+        showData_Pas.CallDatabase();
+
     }
 
 

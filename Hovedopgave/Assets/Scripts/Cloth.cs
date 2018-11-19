@@ -2,7 +2,7 @@
     public class Cloth
     {
     // Mikael Paaske
-    public string Name { get; set; }
+        public string Name { get; set; }
         public string Description { get; set; }
         public string Price { get; set; }
         public string Quality { get; set; }

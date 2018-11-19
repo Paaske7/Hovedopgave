@@ -60,6 +60,11 @@ public class Database_Pas : MonoBehaviour
         foreach (Cloth Clothing in ClothList)
         {
             Debug.Log(Clothing.Name);
+            Debug.Log(Clothing.Price);
+            Debug.Log(Clothing.Description);
+            Debug.Log(Clothing.Quality);
+            Debug.Log(Clothing.Quality2);
+            Debug.Log(Clothing.URL);
         }
 
         return ClothList;
