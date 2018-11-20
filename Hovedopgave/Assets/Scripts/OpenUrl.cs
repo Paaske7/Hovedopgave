@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenUrl_6OfSpades : MonoBehaviour {
+public class OpenUrl : MonoBehaviour {
     // Mikael Paaske
-    public void OpenURL()
+    public void OpenURLPas()
     {
         Application.OpenURL("https://www2.hm.com/da_dk/productpage.0569984016.html/");
-        Debug.Log("is this working?");
+    }
+    public void OpenURL6OfSpades()
+    {
+        Application.OpenURL("https://www2.hm.com/da_dk/productpage.0569984016.html/");
     }
 }
 

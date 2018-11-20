@@ -436,7 +436,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1072108843}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28574d0639777cb448a93a88af8f4035, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d9d4b6d48f85af44a1a9187559208a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &1072108845
@@ -534,7 +534,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1072108844}
-        m_MethodName: changemenuscene
+        m_MethodName: changemenusceneMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

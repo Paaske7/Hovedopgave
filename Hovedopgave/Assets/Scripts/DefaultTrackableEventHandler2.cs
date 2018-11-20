@@ -8,9 +8,11 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
     // Mikael Paaske
     #region PROTECTED_MEMBER_VARIABLES
     protected TrackableBehaviour mTrackableBehaviour;
-    private ShowData_Pas showData_Pas = new ShowData_Pas();
+    private ShowData showData = new ShowData();
     protected TrackableBehaviour.Status m_PreviousStatus;
     protected TrackableBehaviour.Status m_NewStatus;
+
+    List<string> list = new List<string>();
 
     #endregion // PROTECTED_MEMBER_VARIABLES
 
@@ -45,7 +47,7 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
         m_PreviousStatus = previousStatus;
         m_NewStatus = newStatus;
 
-     
+
 
         if (newStatus == TrackableBehaviour.Status.DETECTED ||
             newStatus == TrackableBehaviour.Status.TRACKED ||
@@ -58,7 +60,7 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
                  newStatus == TrackableBehaviour.Status.NO_POSE)
         {
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
-            OnTrackingLost(); 
+            OnTrackingLost();
         }
         else
         {
@@ -92,11 +94,29 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
             component.enabled = true;
 
         Debug.Log("Calling Database");
-        showData_Pas.CallDatabase();
 
+        //IEnumerable<TrackableBehaviour> tbs = TrackerManager.Instance.GetStateManager().GetTrackableBehaviours();
+
+
+        //foreach (TrackableBehaviour tb in tbs)
+        //{
+        //    list.Add(tb.name);
+
+        //    if (tb.name == "ImageTarget_Pas")
+        //    {
+        //        showData.CallDatabasePas();
+        //    }
+        //    else if(tb.name == "ImageTarget_6OfSpades")
+        //    {
+        //        showData.CallDatabase6OfSpades();
+        //    }
+        //    else
+        //    {
+        //        Debug.Log("Fejl");
+        //    }
+
+        showData.CallDatabasePas();
     }
-
-
     protected virtual void OnTrackingLost()
     {
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
