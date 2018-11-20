@@ -27,11 +27,18 @@ public class ShowData_Pas : MonoBehaviour
             clothlist = DB.GetClothList();
 
             nameTextField = GameObject.Find("Name").GetComponent<Text>();
+            nameTextField.text = clothlist[0].Name;
 
-            nameTextField.text = clothlist[0].Name; 
+            PriceTextField = GameObject.Find("Price").GetComponent<Text>();
             PriceTextField.text = clothlist[0].Price;
+
+            DescriptionTextField = GameObject.Find("Description").GetComponent<Text>();
             DescriptionTextField.text = clothlist[0].Description;
+
+            QualityTextField = GameObject.Find("Quality").GetComponent<Text>();
             QualityTextField.text = clothlist[0].Quality;
+
+            Quality2TextField = GameObject.Find("Quality2").GetComponent<Text>();
             Quality2TextField.text = clothlist[0].Quality2;
             //URLTextField.text = clothlist[0].URL;
 

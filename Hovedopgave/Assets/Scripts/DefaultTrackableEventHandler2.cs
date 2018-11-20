@@ -8,7 +8,7 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
     // Mikael Paaske
     #region PROTECTED_MEMBER_VARIABLES
     protected TrackableBehaviour mTrackableBehaviour;
-    ShowData_Pas showData_Pas = new ShowData_Pas();
+    private ShowData_Pas showData_Pas = new ShowData_Pas();
     protected TrackableBehaviour.Status m_PreviousStatus;
     protected TrackableBehaviour.Status m_NewStatus;
 
