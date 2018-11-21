@@ -8,17 +8,20 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
     // Mikael Paaske
     #region PROTECTED_MEMBER_VARIABLES
     protected TrackableBehaviour mTrackableBehaviour;
-    private ShowData showData = new ShowData();
+   
     protected TrackableBehaviour.Status m_PreviousStatus;
     protected TrackableBehaviour.Status m_NewStatus;
-  
 
+    ShowData showData;
+    //private ShowData showData = new ShowData(); - Hvis denne bliver brugt, kommer fejlen you are trying to create a monobehaviour using the 'new' keyword.
+    // Derfor bliver den oprettet på linje 15 istedet og bliver fundet på linje 24.
     #endregion // PROTECTED_MEMBER_VARIABLES
 
     #region UNITY_MONOBEHAVIOUR_METHODS
 
     protected virtual void Start()
     {
+        showData = gameObject.AddComponent<ShowData>();
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour)
             mTrackableBehaviour.RegisterTrackableEventHandler(this);

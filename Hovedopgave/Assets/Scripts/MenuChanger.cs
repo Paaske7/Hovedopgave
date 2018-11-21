@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using Vuforia;
 
 public class MenuChanger : MonoBehaviour {
     // Mikael Paaske
@@ -21,5 +18,9 @@ public class MenuChanger : MonoBehaviour {
     public void changemenuscenePoseScene()
     {
         SceneManager.LoadScene("PoseScene");
+    }
+    public void changemenusceneWishList()
+    {
+        SceneManager.LoadScene("WishListScene");
     }
 }

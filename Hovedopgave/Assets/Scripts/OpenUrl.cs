@@ -12,5 +12,9 @@ public class OpenUrl : MonoBehaviour {
     {
         Application.OpenURL("https://www2.hm.com/da_dk/productpage.0569984016.html/");
     }
+    public void OpenUrlØnskeSkyenLogin()
+    {
+        Application.OpenURL("https://xn--nskeskyen-k8a.dk/#!/");
+    }
 }
 
