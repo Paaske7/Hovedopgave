@@ -11,8 +11,7 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
     private ShowData showData = new ShowData();
     protected TrackableBehaviour.Status m_PreviousStatus;
     protected TrackableBehaviour.Status m_NewStatus;
-
-    List<string> list = new List<string>();
+  
 
     #endregion // PROTECTED_MEMBER_VARIABLES
 
@@ -94,28 +93,21 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
             component.enabled = true;
 
         Debug.Log("Calling Database");
+        if (mTrackableBehaviour.TrackableName == "Pas")
+        {
+            showData.CallDatabasePas();
+        }
+        else if (mTrackableBehaviour.TrackableName == "Six_Of_Spades")
+        {
+            showData.CallDatabase6OfSpades();
+        }
+        else
+        {
+            Debug.Log("Kunne ikke finde navnet");
+        }
 
-        //IEnumerable<TrackableBehaviour> tbs = TrackerManager.Instance.GetStateManager().GetTrackableBehaviours();
 
 
-        //foreach (TrackableBehaviour tb in tbs)
-        //{
-        //    list.Add(tb.name);
-
-        //    if (tb.name == "ImageTarget_Pas")
-        //    {
-        //        showData.CallDatabasePas();
-        //    }
-        //    else if(tb.name == "ImageTarget_6OfSpades")
-        //    {
-        //        showData.CallDatabase6OfSpades();
-        //    }
-        //    else
-        //    {
-        //        Debug.Log("Fejl");
-        //    }
-
-        showData.CallDatabasePas();
     }
     protected virtual void OnTrackingLost()
     {
