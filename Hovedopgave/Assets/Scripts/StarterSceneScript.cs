@@ -1,26 +1,41 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 
 public class StarterSceneScript : MonoBehaviour {
     // Mikaal Paaske
 
-    private MenuChanger menuChanger2;
-    private float delayBeforeLoading = 5f;
+    private MenuChanger menuChanger;
+    private float delayBeforeFadeIn = 2.0f;
+    private float delayBeforeFadeOut = 5.0f;
     private float timeElapsed;
+
+    public Image splashImage;
 
     void Awake()
     {
-        menuChanger2 = GetComponent<MenuChanger>();
+        menuChanger = GetComponent<MenuChanger>();
+    }     
+    IEnumerator Start() // En klasse der kaldes coroutine der ligger i .Net der hjælper med at stoppe processor.
+    {
+      splashImage.canvasRenderer.SetAlpha(0.0f);
+
+        FadeIn();
+        yield return new WaitForSeconds(3.5f); // Suspends the coroutine execution for the given amount of seconds using scaled time.
+        FadeOut();
+        yield return new WaitForSeconds(2.0f);
+        menuChanger.changemenusceneMainMenu();
     }
-    void Update () {
+    void FadeIn()
+    {
+        splashImage.CrossFadeAlpha(1.0f, 2.5f, false);
+    }
+    void FadeOut()
+    {
+        splashImage.CrossFadeAlpha(0.0f, 2.5f, false);
 
-        timeElapsed += Time.deltaTime;
-
-        if (timeElapsed > delayBeforeLoading)
-        {
-            menuChanger2.changemenusceneMainMenu();
-        }
-       
-	}
+    }
+    
 	
 	
 }
