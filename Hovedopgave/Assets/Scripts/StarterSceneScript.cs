@@ -6,9 +6,6 @@ public class StarterSceneScript : MonoBehaviour {
     // Mikaal Paaske
 
     private MenuChanger menuChanger;
-    private float delayBeforeFadeIn = 2.0f;
-    private float delayBeforeFadeOut = 5.0f;
-    private float timeElapsed;
 
     public Image splashImage;
 
