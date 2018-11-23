@@ -1,14 +1,57 @@
 fileFormatVersion: 2
-guid: ea0b4ac00f78b9646b5ed1b09c85d1f2
+guid: e3620f32e1a68d24a8a909dd2a134db0
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: 'Material #15'
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Plane001
+    100000: Background
+    100002: CINEMA_4D_Editor
+    100004: Disc
+    100006: mesh0
+    100008: mesh0_1
+    100010: mesh0_2
+    100012: mesh0_3
+    100014: Null
+    100016: //RootNode
+    100018: Sky
+    100020: Subdivision_Surface
+    100022: Subdivision_Surface_1
+    100024: Subdivision_Surface_2
+    100026: Subdivision_Surface_3
+    400000: Background
+    400002: CINEMA_4D_Editor
+    400004: Disc
+    400006: mesh0
+    400008: mesh0_1
+    400010: mesh0_2
+    400012: mesh0_3
+    400014: Null
+    400016: //RootNode
+    400018: Sky
+    400020: Subdivision_Surface
+    400022: Subdivision_Surface_1
+    400024: Subdivision_Surface_2
+    400026: Subdivision_Surface_3
+    2000000: CINEMA_4D_Editor
+    2100000: Mat.1
+    2100002: Gold - Metal
+    2100004: Skin 02
+    2100006: Tinted Glass
+    2100008: Brushed Chrome
+    2300000: Disc
+    2300002: mesh0
+    2300004: mesh0_1
+    2300006: mesh0_2
+    2300008: mesh0_3
+    3300000: Disc
+    3300002: mesh0
+    3300004: mesh0_1
+    3300006: mesh0_2
+    3300008: mesh0_3
+    4300000: Disc
+    4300002: mesh0_3
+    4300004: mesh0_2
+    4300006: mesh0_1
+    4300008: mesh0
   externalObjects: {}
   materials:
     importMaterials: 1
