@@ -6,29 +6,61 @@ using UnityEngine.UI;
 public class TutorialScript : MonoBehaviour
 {
     // Mikael Paaske
-    public GameObject toturialText1;
+    private GameObject toturialText1;
+    private GameObject toturialText2;
+    private GameObject toturialText3;
+    private GameObject toturialText4;
+    private GameObject toturialText5;
+    private GameObject toturialText6;
+    private GameObject toturialText7;
+    private GameObject toturialText8;
 
     void Start()
     {
-        // Checker om det er første gang appen kører.
+        // Finder tekst objekterne i Unity
         toturialText1 = GameObject.Find("TutorialText1");
+        toturialText2 = GameObject.Find("TutorialText2");
+        toturialText3 = GameObject.Find("TutorialText3");
+        toturialText4 = GameObject.Find("TutorialText4");
+        toturialText5 = GameObject.Find("TutorialText5");
+        toturialText6 = GameObject.Find("TutorialText6");
+        toturialText7 = GameObject.Find("TutorialText7");
+        toturialText8 = GameObject.Find("TutorialText8");
+
+        // Checker om det er første gang appen kører.
         if (PlayerPrefs.GetInt("FIRSTTIMEOPENING", 1) == 1)
         {
+            // Sætter dem til True, det vil sige at de er synlige.
             toturialText1.SetActive(true);
+            toturialText2.SetActive(true);
+            toturialText3.SetActive(true);
+            toturialText4.SetActive(true);
+            toturialText5.SetActive(true);
+            toturialText6.SetActive(true);
+            toturialText7.SetActive(true);
+            toturialText8.SetActive(true);
             Debug.Log("First Time Opening");
 
-            //Set first time opening to false
+            // Sætter "First Time Opening til False
             PlayerPrefs.SetInt("FIRSTTIMEOPENING", 0);
 
         }
         else
         {
+            // Sætter dem til False, det vil sige at de ikke bliver synlige.
             Debug.Log("NOT First Time Opening");
             toturialText1.SetActive(false);
+            toturialText2.SetActive(false);
+            toturialText3.SetActive(false);
+            toturialText4.SetActive(false);
+            toturialText5.SetActive(false);
+            toturialText6.SetActive(false);
+            toturialText7.SetActive(false);
+            toturialText8.SetActive(false);
             //Do your stuff here
         }
     }
-    // Fjerner kun GameObjekter der har en Box Collider og da det kun er vores Toturial tekster der har dette er et tjek efter navn ikke nødvendig.
+    // Fjerner kun GameObjekter der har en Box Collider
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
