@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 413794363}
   - component: {fileID: 413794362}
   m_Layer: 5
-  m_Name: Om Os
+  m_Name: Indstillinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -409,7 +409,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 797976222}
-        m_MethodName: changemenusceneAboutUs
+        m_MethodName: changemenusceneSettings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -740,7 +740,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Om Os
+  m_Text: Indstillinger
 --- !u!222 &1574676061
 CanvasRenderer:
   m_ObjectHideFlags: 0

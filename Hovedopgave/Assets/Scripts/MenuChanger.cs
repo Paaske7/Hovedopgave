@@ -7,9 +7,9 @@ public class MenuChanger : MonoBehaviour {
     {
         SceneManager.LoadScene("MainMenuScene");
     }
-    public void changemenusceneAboutUs()
+    public void changemenusceneSettings()
     {
-        SceneManager.LoadScene("AboutUsScene");
+        SceneManager.LoadScene("SettingsScene");
     }
     public void changemenusceneScanClothScene()
     {
