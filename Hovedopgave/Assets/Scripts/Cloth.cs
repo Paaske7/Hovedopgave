@@ -7,6 +7,8 @@
         public string Price { get; set; }
         public string Quality { get; set; }
         public string Quality2 { get; set; }
-        public string URL { get; set; }
+    public string Quality3 { get; set; }
+    public string Quality4 { get; set; }
+    public string URL { get; set; }
 }
 

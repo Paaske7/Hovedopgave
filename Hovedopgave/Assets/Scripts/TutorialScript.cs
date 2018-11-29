@@ -6,6 +6,10 @@ using UnityEngine.UI;
 public class TutorialScript : MonoBehaviour
 {
     // Mikael Paaske
+
+    // Henter bool fra Settingsscript
+    bool showToturial = SettingsScript.showTutorial;
+
     private GameObject toturialText1;
     private GameObject toturialText2;
     private GameObject toturialText3;
@@ -27,38 +31,48 @@ public class TutorialScript : MonoBehaviour
         toturialText7 = GameObject.Find("TutorialText7");
         toturialText8 = GameObject.Find("TutorialText8");
 
-        // Checker om det er første gang appen kører.
-        if (PlayerPrefs.GetInt("FIRSTTIMEOPENING", 1) == 1)
+
+        if (showToturial == true || PlayerPrefs.GetInt("FIRSTTIMEOPENING", 1) == 1)
         {
-            // Sætter dem til True, det vil sige at de er synlige.
-            toturialText1.SetActive(true);
-            toturialText2.SetActive(true);
-            toturialText3.SetActive(true);
-            toturialText4.SetActive(true);
-            toturialText5.SetActive(true);
-            toturialText6.SetActive(true);
-            toturialText7.SetActive(true);
-            toturialText8.SetActive(true);
-            Debug.Log("First Time Opening");
-
-            // Sætter "First Time Opening til False
-            PlayerPrefs.SetInt("FIRSTTIMEOPENING", 0);
-
+            ShowToturial();
         }
         else
         {
-            // Sætter dem til False, det vil sige at de ikke bliver synlige.
-            Debug.Log("NOT First Time Opening");
-            toturialText1.SetActive(false);
-            toturialText2.SetActive(false);
-            toturialText3.SetActive(false);
-            toturialText4.SetActive(false);
-            toturialText5.SetActive(false);
-            toturialText6.SetActive(false);
-            toturialText7.SetActive(false);
-            toturialText8.SetActive(false);
-            //Do your stuff here
+            DontShowTutorial();
         }
+        
+    }
+
+    void ShowToturial()
+    {
+        // Sætter dem til True, det vil sige at de er synlige.
+        toturialText1.SetActive(true);
+        toturialText2.SetActive(true);
+        toturialText3.SetActive(true);
+        toturialText4.SetActive(true);
+        toturialText5.SetActive(true);
+        toturialText6.SetActive(true);
+        toturialText7.SetActive(true);
+        toturialText8.SetActive(true);
+        Debug.Log("First Time Opening");
+
+        // Sætter "First Time Opening til False
+        PlayerPrefs.SetInt("FIRSTTIMEOPENING", 0);
+
+    }
+    void DontShowTutorial()
+    {
+        // Sætter dem til False, det vil sige at de ikke bliver synlige.
+        Debug.Log("NOT First Time Opening");
+        toturialText1.SetActive(false);
+        toturialText2.SetActive(false);
+        toturialText3.SetActive(false);
+        toturialText4.SetActive(false);
+        toturialText5.SetActive(false);
+        toturialText6.SetActive(false);
+        toturialText7.SetActive(false);
+        toturialText8.SetActive(false);
+        //Do your stuff here
     }
     // Fjerner kun GameObjekter der har en Box Collider
     void Update()

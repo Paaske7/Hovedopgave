@@ -6,15 +6,18 @@ using UnityEngine;
 public class Database : MonoBehaviour
 {
     // Mikael Paaske
-    private string connectionString = @"Data Source = tcp:hovedopgave.database.windows.net,1433; 
-     user id = Mikael;
-     password = Paaske77;
-     Initial Catalog = Clothing;";
-        
-//        @"Data Source=tcp:hovedopgave.database.windows.net,1433;Initial Catalog=Clothing;
-//Persist Security Info=False;User ID=Mikael;Password=Paaske77;MultipleActiveResultSets=False;Encrypt=True;
-//TrustServerCertificate=False;Connection Timeout=30;";
-                              
+    //private string connectionString = @"Data Source = tcp:hovedopgave.database.windows.net,1433; 
+    // user id = Mikael;
+    // password = Paaske77;
+    // Initial Catalog = Clothing;";
+
+    private string connectionString = @"Data Source = mssql7.gear.host; 
+     user id = clothing;
+     password = Paaske77!;
+     Initial Catalog = clothing;";
+
+
+
     SqlConnection connection = null;
 
 
@@ -26,7 +29,7 @@ public class Database : MonoBehaviour
 
     public List<Cloth> GetClothListPas()
     {
-        string name = "lemon curry kjole";
+        string name = "Test";
         Connection();
         Debug.Log("Database - Get ClothList");
 
@@ -49,8 +52,10 @@ public class Database : MonoBehaviour
                     Name = cloth["Name"].ToString(),
                     Price = cloth["Price"].ToString(),
                     Description = cloth["Description"].ToString(),
-                    Quality = cloth["Quality"].ToString(),
+                    Quality = cloth["Quality1"].ToString(),
                     Quality2 = cloth["Quality2"].ToString(),
+                    Quality3 = cloth["Quality3"].ToString(),
+                    Quality4 = cloth["Quality4"].ToString(),
                     URL = cloth["URL"].ToString()
 
                 });
@@ -74,7 +79,7 @@ public class Database : MonoBehaviour
 
     public List<Cloth> GetClothList6OfSpades()
     {
-        string name = "Jacquardstrikket trøje";
+        string name = "Test2";
         Connection();
         Debug.Log("Database - Get ClothList");
 
@@ -97,8 +102,10 @@ public class Database : MonoBehaviour
                     Name = cloth["Name"].ToString(),
                     Price = cloth["Price"].ToString(),
                     Description = cloth["Description"].ToString(),
-                    Quality = cloth["Quality"].ToString(),
+                    Quality = cloth["Quality1"].ToString(),
                     Quality2 = cloth["Quality2"].ToString(),
+                    Quality3 = cloth["Quality3"].ToString(),
+                    Quality4 = cloth["Quality4"].ToString(),
                     URL = cloth["URL"].ToString()
 
                 });

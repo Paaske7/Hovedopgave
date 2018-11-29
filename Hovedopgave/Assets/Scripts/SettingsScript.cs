@@ -4,23 +4,8 @@ using UnityEngine;
 
 public class SettingsScript : MonoBehaviour {
 
-    private ProductSwitcher productSwitcher;
-    public static bool Sexchange = true;
-    // Use this for initialization
-    void Update () {
-        //if (Sexchange == true)
-        //{
-        //    productSwitcher.defaultModel = true;
-        //}
-        //else if (Sexchange == false)
-        //{
-        //    productSwitcher.defaultModel = false;
-        //}
-        //else
-        //{
-        //    Debug.Log("Fejl");
-        //}
-    }
+    public static bool Sexchange;
+    public static bool showTutorial = false;
 	
 	public void SettingsChangeSexMale()
     {
@@ -31,5 +16,10 @@ public class SettingsScript : MonoBehaviour {
     {
         Sexchange = false;
         Debug.Log("Female");
+    }
+
+    public void ShowToturial()
+    {
+        showTutorial = true;
     }
 }
