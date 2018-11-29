@@ -35,6 +35,8 @@ public class TutorialScript : MonoBehaviour
         if (showToturial == true || PlayerPrefs.GetInt("FIRSTTIMEOPENING", 1) == 1)
         {
             ShowToturial();
+            // Gør den False igen, da tutorialen nu er blevet vist en gang mere. 
+            SettingsScript.showTutorial = false;
         }
         else
         {
