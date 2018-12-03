@@ -96,13 +96,21 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
             component.enabled = true;
 
         Debug.Log("Calling Database");
-        if (mTrackableBehaviour.TrackableName == "Pas")
+        if (mTrackableBehaviour.TrackableName == "QRCode1")
         {
-            showData.CallDatabasePas();
+            showData.CallDatabaseQRCode1();
         }
-        else if (mTrackableBehaviour.TrackableName == "Six_Of_Spades")
+        else if (mTrackableBehaviour.TrackableName == "QRCode2")
         {
-            showData.CallDatabase6OfSpades();
+            showData.CallDatabaseQRCode2();
+        }
+        else if (mTrackableBehaviour.TrackableName == "QRCode3")
+        {
+            showData.CallDatabaseQRCode3();
+        }
+        else if (mTrackableBehaviour.TrackableName == "QRCode4")
+        {
+            showData.CallDatabaseQRCode4();
         }
         else
         {
