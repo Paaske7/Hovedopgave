@@ -4,19 +4,20 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DisplayProduct : MonoBehaviour {
+public class DisplayProduct : MonoBehaviour
+{
     public GameObject productPlaceHolder;
+
+    public void Start()
+    {
+
+    }
     public void SwitchProduct(GameObject selectedButton)
     {
-//lav toggle på on/off for at fjerne et produkt hvis det allerede vises
+        //lav toggle på on/off for at fjerne et produkt hvis det allerede vises
         string ProductName = selectedButton.GetComponentInChildren<Text>().text;
-        //foreach (GameObject Obj in Resources.FindObjectsOfTypeAll<GameObject>())
-        //{
-        //    if (Obj.name == ProductName + "(Clone)")
-        //    {
-        //        Destroy(Obj);
-        //    }
-        //}
+
+
         if (GameObject.Find(ProductName + "(Clone)") != null)
         {
             productPlaceHolder = GameObject.Find(ProductName + "(Clone)");
@@ -27,9 +28,9 @@ public class DisplayProduct : MonoBehaviour {
             productPlaceHolder = Resources.Load<GameObject>("Prefabs/Products/" + ProductName);
             Instantiate(productPlaceHolder, productPlaceHolder.transform.position, Quaternion.Euler(0, 180, 0)); // instatiate a prefab on the position where the ray hits the floor.
         }
-        
+
         Debug.Log("slut: " + productPlaceHolder.name);
 
-        
+
     }
 }
