@@ -8,12 +8,9 @@ public class DisplayProduct : MonoBehaviour
 {
     public GameObject productPlaceHolder;
 
-    public void Start()
-    {
-
-    }
     public void SwitchProduct(GameObject selectedButton)
     {
+        // Thomas Nielsen
         //lav toggle på on/off for at fjerne et produkt hvis det allerede vises
         string ProductName = selectedButton.GetComponentInChildren<Text>().text;
 
@@ -30,7 +27,5 @@ public class DisplayProduct : MonoBehaviour
         }
 
         Debug.Log("slut: " + productPlaceHolder.name);
-
-
     }
 }

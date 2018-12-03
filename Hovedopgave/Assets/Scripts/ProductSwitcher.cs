@@ -23,24 +23,23 @@ public class ProductSwitcher : MonoBehaviour
         // checkter om knappen fra Settings er trykket på - Det vil sige om der er trykket skift køn 
         if (getSexchangeFromSettings == false)
         {
-            modelPlaceHolder = Resources.Load<GameObject>("Prefabs/xbot");
+            modelPlaceHolder = Resources.Load<GameObject>("Prefabs/m01_naked_00_h");
             Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
         }
         else if (getSexchangeFromSettings == true)
         {
-            currentModelName = "ybot";
-            modelPlaceHolder = Resources.Load<GameObject>("Prefabs/ybot");
+            modelPlaceHolder = Resources.Load<GameObject>("Prefabs/m01_schoolwear_000_h");
             Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
         }
         else
         {
-            modelPlaceHolder = Resources.Load<GameObject>("Prefabs/xbot");
+            modelPlaceHolder = Resources.Load<GameObject>("Prefabs/m01_naked_00_h");
             Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
         }
     }
 
 
-    // Thomas Nielsen
+    // Thomas Nielsen og Mikael Paaske
     //Load alle nye modeller ind i projektet under 'Models>Products>data/sæson
     //Alle tilgængelige produkter findes fra databasen og vises i en menu så brugeren kan vælge
     //Når brugeren vælger et produkt bruges info fra DB til at finde modelNavnet
@@ -60,15 +59,15 @@ public class ProductSwitcher : MonoBehaviour
 
         if (defaultModel)
         {
-            currentModelName = "xbot";
-            modelPlaceHolder = Resources.Load<GameObject>("Prefabs/xbot");
+            currentModelName = "m01_naked_00_h";
+            modelPlaceHolder = Resources.Load<GameObject>("Prefabs/m01_naked_00_h");
             Debug.Log(modelPlaceHolder);
             Debug.Log(currentModelName);
         }
         else
         {
-            currentModelName = "ybot";
-            modelPlaceHolder = Resources.Load<GameObject>("Prefabs/ybot");
+            currentModelName = "m01_schoolwear_000_h";
+            modelPlaceHolder = Resources.Load<GameObject>("Prefabs/m01_schoolwear_000_h");
             Debug.Log(modelPlaceHolder);
             Debug.Log(currentModelName);
 
@@ -76,7 +75,7 @@ public class ProductSwitcher : MonoBehaviour
 
         foreach (GameObject Obj in Resources.FindObjectsOfTypeAll<GameObject>())
         {
-            if (Obj.name == "xbot(Clone)" || Obj.name == "ybot(Clone)")
+            if (Obj.name == "m01_naked_00_h(Clone)" || Obj.name == "m01_schoolwear_000_h(Clone)")
             {
                 Destroy(Obj);
             }

@@ -11,29 +11,29 @@ public class MoveModel : MonoBehaviour {
 
     public void MoveLeft()
     {
-        if (GameObject.Find("xbot(Clone)") != null)
+        if (GameObject.Find("m01_naked_00_h(Clone)") != null)
         {
-            model = GameObject.Find("xbot(Clone)");
+            model = GameObject.Find("m01_naked_00_h(Clone)");
             model.transform.Rotate(Vector3.up * speed);
         }
 
-        if (GameObject.Find("ybot(Clone)") != null)
+        if (GameObject.Find("m01_schoolwear_000_h(Clone)") != null)
         {
-            model2 = GameObject.Find("ybot(Clone)");
+            model2 = GameObject.Find("m01_schoolwear_000_h(Clone)");
             model2.transform.Rotate(Vector3.up * speed);
         }
     }
 
     public void MoveRight()
     {
-        if (GameObject.Find("xbot(Clone)") != null)
+        if (GameObject.Find("m01_naked_00_h(Clone)") != null)
         {
-            model = GameObject.Find("xbot(Clone)");
+            model = GameObject.Find("m01_naked_00_h(Clone)");
             model.transform.Rotate(Vector3.down * speed);
         }
-        if (GameObject.Find("ybot(Clone)") != null)
+        if (GameObject.Find("m01_schoolwear_000_h(Clone)") != null)
         {
-            model2 = GameObject.Find("ybot(Clone)");
+            model2 = GameObject.Find("m01_schoolwear_000_h(Clone)");
             model2.transform.Rotate(Vector3.down * speed);
         }
     }
