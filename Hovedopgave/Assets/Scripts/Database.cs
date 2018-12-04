@@ -116,7 +116,7 @@ public class Database : MonoBehaviour
         {
             Debug.Log(Clothing.Name);
         }
-
+        Debug.Log(ClothList[0].URL);
         return ClothList;
     }
 
