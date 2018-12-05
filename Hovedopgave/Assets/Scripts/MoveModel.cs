@@ -8,33 +8,29 @@ public class MoveModel : MonoBehaviour {
     private GameObject model;
     private GameObject model2;
     float speed = 6.0f;
+    public GameObject[] respawns;
 
+    public void Start()
+    {
+       
+    }
     public void MoveLeft()
     {
-        if (GameObject.Find("m01_naked_00_h(Clone)") != null)
-        {
-            model = GameObject.Find("m01_naked_00_h(Clone)");
-            model.transform.Rotate(Vector3.up * speed);
-        }
+        if (respawns != null)
+        { 
+            respawns = GameObject.FindGameObjectsWithTag("Respawn");
 
-        if (GameObject.Find("m01_schoolwear_000_h(Clone)") != null)
-        {
-            model2 = GameObject.Find("m01_schoolwear_000_h(Clone)");
-            model2.transform.Rotate(Vector3.up * speed);
+            respawns[0].transform.Rotate(Vector3.up * speed);
         }
     }
 
     public void MoveRight()
     {
-        if (GameObject.Find("m01_naked_00_h(Clone)") != null)
+        if (respawns != null)
         {
-            model = GameObject.Find("m01_naked_00_h(Clone)");
-            model.transform.Rotate(Vector3.down * speed);
-        }
-        if (GameObject.Find("m01_schoolwear_000_h(Clone)") != null)
-        {
-            model2 = GameObject.Find("m01_schoolwear_000_h(Clone)");
-            model2.transform.Rotate(Vector3.down * speed);
+            respawns = GameObject.FindGameObjectsWithTag("Respawn");
+
+            respawns[0].transform.Rotate(Vector3.down * speed);
         }
     }
 }

@@ -45,7 +45,7 @@ public class ShowData : MonoBehaviour
             Quality4TextField.text = clothlist[0].Quality4;
 
             //URLTextField.text = clothlist[0].URL;
-            GameController.GetComponent<copypaste>().ProductUrl = clothlist[0].URL;
+            //GameController.GetComponent<copypaste>().ProductUrl = clothlist[0].URL;
             Debug.Log("Product URL SD: " + clothlist[0].URL);
 
             Debug.Log("ShowData - QRCode1 End");

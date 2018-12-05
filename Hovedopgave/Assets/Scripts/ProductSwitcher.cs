@@ -7,34 +7,64 @@ public class ProductSwitcher : MonoBehaviour
 {
     // Mikael Paaske
     // Laver en ny bool og sætter den = bool fra SettingsScript
-    bool getSexchangeFromSettings = SettingsScript.Sexchange;
+    public static bool getSexchangeFromSettings = SettingsScript.Sexchange;
+ 
+    GameObject button1Male;
+    GameObject button2Male;
+    GameObject button3Male;
+    GameObject button4Male;
+
+    GameObject button1Female;
+    GameObject button2Female;
+    GameObject button3Female;
+    GameObject button4Female;
 
     // Thomas Nielsen
-    public bool defaultModel = true;
+    public DisplayProduct displayProduct;
     public GameObject modelPlaceHolder;
     private string currentModelName;
     SettingsScript settingsScript;
     private string itemSelected;
     public GameObject SelectedButton;
 
+
     private void Start()
     {
         // Mikael Paaske
-        // checkter om knappen fra Settings er trykket på - Det vil sige om der er trykket skift køn 
-        if (getSexchangeFromSettings == false)
+        DestroyAll();
+        button1Male = GameObject.Find("MaleBlackJacket");
+        button2Male = GameObject.Find("MalePantsBlue");
+        button3Male = GameObject.Find("MaleTShirtWhite");
+        button4Male = GameObject.Find("MaleUnderPantsBlack");
+
+        button1Female = GameObject.Find("FemaleBlackShoes");
+        button2Female = GameObject.Find("FemaleBlackUnderPants");
+        button3Female = GameObject.Find("FemaleBlueDress");
+        button4Female = GameObject.Find("FemaleGreenJacket");
+
+        if (getSexchangeFromSettings == true)
         {
-            modelPlaceHolder = Resources.Load<GameObject>("Prefabs/m01_naked_00_h");
-            Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+            button1Male.SetActive(true);
+            button2Male.SetActive(true);
+            button3Male.SetActive(true);
+            button4Male.SetActive(true);
+
+            button1Female.SetActive(false);
+            button2Female.SetActive(false);
+            button3Female.SetActive(false);
+            button4Female.SetActive(false);
         }
-        else if (getSexchangeFromSettings == true)
+        else if(getSexchangeFromSettings == false)
         {
-            modelPlaceHolder = Resources.Load<GameObject>("Prefabs/m01_schoolwear_000_h");
-            Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
-        }
-        else
-        {
-            modelPlaceHolder = Resources.Load<GameObject>("Prefabs/m01_naked_00_h");
-            Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+            button1Male.SetActive(false);
+            button2Male.SetActive(false);
+            button3Male.SetActive(false);
+            button4Male.SetActive(false);
+
+            button1Female.SetActive(true);
+            button2Female.SetActive(true);
+            button3Female.SetActive(true);
+            button4Female.SetActive(true);
         }
     }
 
@@ -55,35 +85,63 @@ public class ProductSwitcher : MonoBehaviour
     //sæt en fast scale for prefabs så en par jeans ikke er 8 meter høj
     public void ChangeSex()
     {
-        Debug.Log(defaultModel);
+  
 
-        if (defaultModel)
+        if (getSexchangeFromSettings)
         {
-            currentModelName = "m01_naked_00_h";
-            modelPlaceHolder = Resources.Load<GameObject>("Prefabs/m01_naked_00_h");
+            DestroyAll();
+            currentModelName = "FemaleNaked";
+            modelPlaceHolder = Resources.Load<GameObject>("Prefabs/FemaleNaked");
             Debug.Log(modelPlaceHolder);
             Debug.Log(currentModelName);
+            button1Male.SetActive(false);
+            button2Male.SetActive(false);
+            button3Male.SetActive(false);
+            button4Male.SetActive(false);
+
+            button1Female.SetActive(true);
+            button2Female.SetActive(true);
+            button3Female.SetActive(true);
+            button4Female.SetActive(true);
+
         }
         else
         {
-            currentModelName = "m01_schoolwear_000_h";
-            modelPlaceHolder = Resources.Load<GameObject>("Prefabs/m01_schoolwear_000_h");
+            DestroyAll();
+            currentModelName = "MaleNaked";
+            modelPlaceHolder = Resources.Load<GameObject>("Prefabs/MaleNaked");
             Debug.Log(modelPlaceHolder);
             Debug.Log(currentModelName);
+            button1Male.SetActive(true);
+            button2Male.SetActive(true);
+            button3Male.SetActive(true);
+            button4Male.SetActive(true);
+
+            button1Female.SetActive(false);
+            button2Female.SetActive(false);
+            button3Female.SetActive(false);
+            button4Female.SetActive(false);
+
 
         }
+     
+      
+        Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0,180,0));
+        Debug.Log("Model er spawned");
+        getSexchangeFromSettings = !getSexchangeFromSettings;
 
+
+    }
+    void DestroyAll()
+    {
         foreach (GameObject Obj in Resources.FindObjectsOfTypeAll<GameObject>())
         {
-            if (Obj.name == "m01_naked_00_h(Clone)" || Obj.name == "m01_schoolwear_000_h(Clone)")
+            if (Obj.name == "FemaleNaked(Clone)" || Obj.name == "FemaleBlackShoes(Clone)" || Obj.name == "FemaleBlackUnderPants(Clone)" ||
+                Obj.name == "FemaleBlueDress(Clone)" || Obj.name == "FemaleGreenJacket(Clone)" || Obj.name == "MaleBlackJacket(Clone)" || Obj.name == "MaleNaked(Clone)"
+                || Obj.name == "MalePantsBlue(Clone)" || Obj.name == "MaleTShirtWhite(Clone)" || Obj.name == "MaleUnderPantsBlack(Clone)")
             {
                 Destroy(Obj);
             }
         }
-        Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0,180,0));
-        Debug.Log("Model er spawned");
-        defaultModel = !defaultModel;
-
-
     }
 }
