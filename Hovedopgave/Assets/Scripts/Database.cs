@@ -52,10 +52,10 @@ public class Database : MonoBehaviour
                     Name = cloth["Name"].ToString(),
                     Price = cloth["Price"].ToString(),
                     Description = cloth["Description"].ToString(),
-                    Quality = cloth["Quality1"].ToString(),
-                    Quality2 = cloth["Quality2"].ToString(),
-                    Quality3 = cloth["Quality3"].ToString(),
-                    Quality4 = cloth["Quality4"].ToString(),
+                    Quality = cloth["fabric1"].ToString(),
+                    Quality2 = cloth["fabric2"].ToString(),
+                    Quality3 = cloth["fabric3"].ToString(),
+                    Quality4 = cloth["fabric4"].ToString(),
                     URL = cloth["URL"].ToString()
 
                 });
@@ -102,10 +102,10 @@ public class Database : MonoBehaviour
                     Name = cloth["Name"].ToString(),
                     Price = cloth["Price"].ToString(),
                     Description = cloth["Description"].ToString(),
-                    Quality = cloth["Quality1"].ToString(),
-                    Quality2 = cloth["Quality2"].ToString(),
-                    Quality3 = cloth["Quality3"].ToString(),
-                    Quality4 = cloth["Quality4"].ToString(),
+                    Quality = cloth["fabric1"].ToString(),
+                    Quality2 = cloth["fabric2"].ToString(),
+                    Quality3 = cloth["fabric3"].ToString(),
+                    Quality4 = cloth["fabric4"].ToString(),
                     URL = cloth["URL"].ToString()
 
                 });
@@ -145,10 +145,10 @@ public class Database : MonoBehaviour
                     Name = cloth["Name"].ToString(),
                     Price = cloth["Price"].ToString(),
                     Description = cloth["Description"].ToString(),
-                    Quality = cloth["Quality1"].ToString(),
-                    Quality2 = cloth["Quality2"].ToString(),
-                    Quality3 = cloth["Quality3"].ToString(),
-                    Quality4 = cloth["Quality4"].ToString(),
+                    Quality = cloth["fabric1"].ToString(),
+                    Quality2 = cloth["fabric2"].ToString(),
+                    Quality3 = cloth["fabric3"].ToString(),
+                    Quality4 = cloth["fabric4"].ToString(),
                     URL = cloth["URL"].ToString()
 
                 });
@@ -188,10 +188,10 @@ public class Database : MonoBehaviour
                     Name = cloth["Name"].ToString(),
                     Price = cloth["Price"].ToString(),
                     Description = cloth["Description"].ToString(),
-                    Quality = cloth["Quality1"].ToString(),
-                    Quality2 = cloth["Quality2"].ToString(),
-                    Quality3 = cloth["Quality3"].ToString(),
-                    Quality4 = cloth["Quality4"].ToString(),
+                    Quality = cloth["fabric1"].ToString(),
+                    Quality2 = cloth["fabric2"].ToString(),
+                    Quality3 = cloth["fabric3"].ToString(),
+                    Quality4 = cloth["fabric4"].ToString(),
                     URL = cloth["URL"].ToString()
 
                 });

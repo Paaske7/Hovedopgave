@@ -988,7 +988,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pose
+  m_Text: Showroom
 --- !u!222 &1791902921
 CanvasRenderer:
   m_ObjectHideFlags: 0
