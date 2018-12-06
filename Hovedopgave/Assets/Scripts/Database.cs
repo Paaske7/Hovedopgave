@@ -29,7 +29,7 @@ public class Database : MonoBehaviour
 
     public List<Cloth> GetClothListQRCode1()
     {
-        string name = "Test";
+        string name = "WOODBIRD STEFFEN TWILL PANT";
         Connection();
         Debug.Log("Database - Get ClothList");
 
@@ -79,7 +79,7 @@ public class Database : MonoBehaviour
 
     public List<Cloth> GetClothListQRCode2()
     {
-        string name = "Test2";
+        string name = "PATAGONIA BAGGIES";
         Connection();
         Debug.Log("Database - Get ClothList");
 
@@ -122,7 +122,7 @@ public class Database : MonoBehaviour
 
     public List<Cloth> GetClothListQRCode3()
     {
-        string name = "Test3";
+        string name = "RAINS 1202";
         Connection();
         Debug.Log("Database - Get ClothList");
 
@@ -165,7 +165,7 @@ public class Database : MonoBehaviour
 
     public List<Cloth> GetClothListQRCode4()
     {
-        string name = "Test4";
+        string name = "GANNI BARRA CREPE TWIST";
         Connection();
         Debug.Log("Database - Get ClothList");
 
