@@ -7,7 +7,6 @@ public class ProductSwitcher : MonoBehaviour
 {
     // Mikael Paaske
     // Laver en ny bool og sætter den = bool fra SettingsScript
-    public static bool getSexchangeFromSettings = SettingsScript.Sexchange;
  
     GameObject button1Male;
     GameObject button2Male;
@@ -30,6 +29,7 @@ public class ProductSwitcher : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("Productswitcher:" + SettingsScript.isMale);
         // Mikael Paaske
         DestroyAll();
         button1Male = GameObject.Find("MaleBlackJacket");
@@ -42,7 +42,7 @@ public class ProductSwitcher : MonoBehaviour
         button3Female = GameObject.Find("FemaleBlueDress");
         button4Female = GameObject.Find("FemaleGreenJacket");
 
-        if (getSexchangeFromSettings == true)
+        if (SettingsScript.isMale == true)
         {
             button1Male.SetActive(true);
             button2Male.SetActive(true);
@@ -54,7 +54,7 @@ public class ProductSwitcher : MonoBehaviour
             button3Female.SetActive(false);
             button4Female.SetActive(false);
         }
-        else if(getSexchangeFromSettings == false)
+        else if(SettingsScript.isMale == false)
         {
             button1Male.SetActive(false);
             button2Male.SetActive(false);
@@ -87,7 +87,7 @@ public class ProductSwitcher : MonoBehaviour
     {
   
 
-        if (getSexchangeFromSettings)
+        if (SettingsScript.isMale)
         {
             DestroyAll();
             currentModelName = "FemaleNaked";
@@ -128,7 +128,7 @@ public class ProductSwitcher : MonoBehaviour
       
         Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0,180,0));
         Debug.Log("Model er spawned");
-        getSexchangeFromSettings = !getSexchangeFromSettings;
+        SettingsScript.isMale = !SettingsScript.isMale;
 
 
     }

@@ -27,13 +27,13 @@ public class Database : MonoBehaviour
         Debug.Log("Database - Connection");
     }
 
-    public List<Cloth> GetClothListQRCode1()
+    public List<Cloth> GetclothesInfoListQRCode1()
     {
         string name = "WOODBIRD STEFFEN TWILL PANT";
         Connection();
-        Debug.Log("Database - Get ClothList");
+        Debug.Log("Database - Get clothesInfoList");
 
-        List<Cloth> ClothList = new List<Cloth>();
+        List<Cloth> clothesInfoList = new List<Cloth>();
         DataTable dataTable = new DataTable();
 
             SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Cloths where Name = '" + name + "'", connection);
@@ -46,7 +46,7 @@ public class Database : MonoBehaviour
         foreach (DataRow cloth in dataTable.Rows)
         {
 
-            ClothList.Add(
+            clothesInfoList.Add(
                 new Cloth
                 {
                     Name = cloth["Name"].ToString(),
@@ -62,7 +62,7 @@ public class Database : MonoBehaviour
             
         }
 
-        foreach (Cloth Clothing in ClothList)
+        foreach (Cloth Clothing in clothesInfoList)
         {
             Debug.Log(Clothing.Name);
             Debug.Log(Clothing.Price);
@@ -72,18 +72,18 @@ public class Database : MonoBehaviour
             Debug.Log(Clothing.URL);
         }
 
-        return ClothList;
+        return clothesInfoList;
     }
 
 
 
-    public List<Cloth> GetClothListQRCode2()
+    public List<Cloth> GetclothesInfoListQRCode2()
     {
         string name = "PATAGONIA BAGGIES";
         Connection();
-        Debug.Log("Database - Get ClothList");
+        Debug.Log("Database - Get clothesInfoList");
 
-        List<Cloth> ClothList = new List<Cloth>();
+        List<Cloth> clothesInfoList = new List<Cloth>();
         DataTable dataTable = new DataTable();
 
         SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Cloths where Name = '" + name + "'", connection);
@@ -96,7 +96,7 @@ public class Database : MonoBehaviour
         foreach (DataRow cloth in dataTable.Rows)
         {
 
-            ClothList.Add(
+            clothesInfoList.Add(
                 new Cloth
                 {
                     Name = cloth["Name"].ToString(),
@@ -112,21 +112,21 @@ public class Database : MonoBehaviour
 
         }
 
-        foreach (Cloth Clothing in ClothList)
+        foreach (Cloth Clothing in clothesInfoList)
         {
             Debug.Log(Clothing.Name);
         }
-        Debug.Log(ClothList[0].URL);
-        return ClothList;
+        Debug.Log(clothesInfoList[0].URL);
+        return clothesInfoList;
     }
 
-    public List<Cloth> GetClothListQRCode3()
+    public List<Cloth> GetclothesInfoListQRCode3()
     {
         string name = "RAINS 1202";
         Connection();
-        Debug.Log("Database - Get ClothList");
+        Debug.Log("Database - Get clothesInfoList");
 
-        List<Cloth> ClothList = new List<Cloth>();
+        List<Cloth> clothesInfoList = new List<Cloth>();
         DataTable dataTable = new DataTable();
 
         SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Cloths where Name = '" + name + "'", connection);
@@ -139,7 +139,7 @@ public class Database : MonoBehaviour
         foreach (DataRow cloth in dataTable.Rows)
         {
 
-            ClothList.Add(
+            clothesInfoList.Add(
                 new Cloth
                 {
                     Name = cloth["Name"].ToString(),
@@ -155,21 +155,21 @@ public class Database : MonoBehaviour
 
         }
 
-        foreach (Cloth Clothing in ClothList)
+        foreach (Cloth Clothing in clothesInfoList)
         {
             Debug.Log(Clothing.Name);
         }
 
-        return ClothList;
+        return clothesInfoList;
     }
 
-    public List<Cloth> GetClothListQRCode4()
+    public List<Cloth> GetclothesInfoListQRCode4()
     {
         string name = "GANNI BARRA CREPE TWIST";
         Connection();
-        Debug.Log("Database - Get ClothList");
+        Debug.Log("Database - Get clothesInfoList");
 
-        List<Cloth> ClothList = new List<Cloth>();
+        List<Cloth> clothesInfoList = new List<Cloth>();
         DataTable dataTable = new DataTable();
 
         SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Cloths where Name = '" + name + "'", connection);
@@ -182,7 +182,7 @@ public class Database : MonoBehaviour
         foreach (DataRow cloth in dataTable.Rows)
         {
 
-            ClothList.Add(
+            clothesInfoList.Add(
                 new Cloth
                 {
                     Name = cloth["Name"].ToString(),
@@ -198,12 +198,12 @@ public class Database : MonoBehaviour
 
         }
 
-        foreach (Cloth Clothing in ClothList)
+        foreach (Cloth Clothing in clothesInfoList)
         {
             Debug.Log(Clothing.Name);
         }
 
-        return ClothList;
+        return clothesInfoList;
     }
 
 }

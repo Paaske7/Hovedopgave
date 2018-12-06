@@ -7,26 +7,30 @@ using UnityEngine.EventSystems;
 
 public class DisplayProduct : MonoBehaviour
 {
-    public GameObject productPlaceHolder;
-    public bool defaultModel = true;
-    public bool getSexchangeFromProductSwitcher = SettingsScript.Sexchange;
+    //public GameObject productPlaceHolder;
+    //public bool defaultModel = true;
     public GameObject modelPlaceHolder;
 
 
 
     public void Start()
     {
-        Debug.Log("Displayproduct: " + getSexchangeFromProductSwitcher);
+        Debug.Log("Settings: " + SettingsScript.isMale);
         DestroyAll();
 
-        if (getSexchangeFromProductSwitcher == true)
+        if (SettingsScript.isMale == true)
         {
             modelPlaceHolder = Resources.Load<GameObject>("Prefabs/MaleNaked");
             Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
         }
-        else if(getSexchangeFromProductSwitcher == false)
+        else if(SettingsScript.isMale == false)
         {
             modelPlaceHolder = Resources.Load<GameObject>("Prefabs/FemaleNaked");
+            Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+        }
+        else
+        {
+            modelPlaceHolder = Resources.Load<GameObject>("Prefabs/MaleNaked");
             Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
         }
 

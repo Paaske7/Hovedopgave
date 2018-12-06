@@ -20,33 +20,33 @@ public class ShowData : MonoBehaviour
     {
         {
             DB = GameObject.Find("DatabaseHandler").GetComponent<Database>();
-            List<Cloth> clothlist;
-            clothlist = DB.GetClothListQRCode1();
+            List<Cloth> clothesInfoList;
+            clothesInfoList = DB.GetclothesInfoListQRCode1();
 
             nameTextField = GameObject.Find("QRCode1_Name").GetComponent<Text>();
-            nameTextField.text = clothlist[0].Name;
+            nameTextField.text = clothesInfoList[0].Name;
 
             PriceTextField = GameObject.Find("QRCode1_Price").GetComponent<Text>();
-            PriceTextField.text = clothlist[0].Price;
+            PriceTextField.text = clothesInfoList[0].Price;
 
             DescriptionTextField = GameObject.Find("QRCode1_Description").GetComponent<Text>();
-            DescriptionTextField.text = clothlist[0].Description;
+            DescriptionTextField.text = clothesInfoList[0].Description;
 
             QualityTextField = GameObject.Find("QRCode1_Quality").GetComponent<Text>();
-            QualityTextField.text = clothlist[0].Quality;
+            QualityTextField.text = clothesInfoList[0].Quality;
 
             Quality2TextField = GameObject.Find("QRCode1_Quality2").GetComponent<Text>();
-            Quality2TextField.text = clothlist[0].Quality2;
+            Quality2TextField.text = clothesInfoList[0].Quality2;
 
             Quality3TextField = GameObject.Find("QRCode1_Quality3").GetComponent<Text>();
-            Quality3TextField.text = clothlist[0].Quality3;
+            Quality3TextField.text = clothesInfoList[0].Quality3;
 
             Quality4TextField = GameObject.Find("QRCode1_Quality4").GetComponent<Text>();
-            Quality4TextField.text = clothlist[0].Quality4;
+            Quality4TextField.text = clothesInfoList[0].Quality4;
 
-            //URLTextField.text = clothlist[0].URL;
-            //GameController.GetComponent<copypaste>().ProductUrl = clothlist[0].URL;
-            Debug.Log("Product URL SD: " + clothlist[0].URL);
+            //URLTextField.text = clothesInfoList[0].URL;
+            //GameController.GetComponent<copypaste>().ProductUrl = clothesInfoList[0].URL;
+            Debug.Log("Product URL SD: " + clothesInfoList[0].URL);
 
             Debug.Log("ShowData - QRCode1 End");
         }
@@ -54,30 +54,30 @@ public class ShowData : MonoBehaviour
     public void CallDatabaseQRCode2()
     {
         DB = GameObject.Find("DatabaseHandler").GetComponent<Database>();
-        List<Cloth> clothlist;
-        clothlist = DB.GetClothListQRCode2();
+        List<Cloth> clothesInfoList;
+        clothesInfoList = DB.GetclothesInfoListQRCode2();
 
         nameTextField = GameObject.Find("QRCode2_Name").GetComponent<Text>();
-        nameTextField.text = clothlist[0].Name;
+        nameTextField.text = clothesInfoList[0].Name;
 
         PriceTextField = GameObject.Find("QRCode2_Price").GetComponent<Text>();
-        PriceTextField.text = clothlist[0].Price;
+        PriceTextField.text = clothesInfoList[0].Price;
 
         DescriptionTextField = GameObject.Find("QRCode2_Description").GetComponent<Text>();
-        DescriptionTextField.text = clothlist[0].Description;
+        DescriptionTextField.text = clothesInfoList[0].Description;
 
         QualityTextField = GameObject.Find("QRCode2_Quality").GetComponent<Text>();
-        QualityTextField.text = clothlist[0].Quality;
+        QualityTextField.text = clothesInfoList[0].Quality;
 
         Quality2TextField = GameObject.Find("QRCode2_Quality2").GetComponent<Text>();
-        Quality2TextField.text = clothlist[0].Quality2;
+        Quality2TextField.text = clothesInfoList[0].Quality2;
 
         Quality3TextField = GameObject.Find("QRCode2_Quality3").GetComponent<Text>();
-        Quality3TextField.text = clothlist[0].Quality3;
+        Quality3TextField.text = clothesInfoList[0].Quality3;
 
         Quality4TextField = GameObject.Find("QRCode2_Quality4").GetComponent<Text>();
-        Quality4TextField.text = clothlist[0].Quality4;
-        //URLTextField.text = clothlist[0].URL;
+        Quality4TextField.text = clothesInfoList[0].Quality4;
+        //URLTextField.text = clothesInfoList[0].URL;
 
         Debug.Log("ShowData - QRCode2 End");
     }
@@ -85,30 +85,30 @@ public class ShowData : MonoBehaviour
     public void CallDatabaseQRCode3()
     {
         DB = GameObject.Find("DatabaseHandler").GetComponent<Database>();
-        List<Cloth> clothlist;
-        clothlist = DB.GetClothListQRCode3();
+        List<Cloth> clothesInfoList;
+        clothesInfoList = DB.GetclothesInfoListQRCode3();
 
         nameTextField = GameObject.Find("QRCode3_Name").GetComponent<Text>();
-        nameTextField.text = clothlist[0].Name;
+        nameTextField.text = clothesInfoList[0].Name;
 
         PriceTextField = GameObject.Find("QRCode3_Price").GetComponent<Text>();
-        PriceTextField.text = clothlist[0].Price;
+        PriceTextField.text = clothesInfoList[0].Price;
 
         DescriptionTextField = GameObject.Find("QRCode3_Description").GetComponent<Text>();
-        DescriptionTextField.text = clothlist[0].Description;
+        DescriptionTextField.text = clothesInfoList[0].Description;
 
         QualityTextField = GameObject.Find("QRCode3_Quality").GetComponent<Text>();
-        QualityTextField.text = clothlist[0].Quality;
+        QualityTextField.text = clothesInfoList[0].Quality;
 
         Quality2TextField = GameObject.Find("QRCode3_Quality2").GetComponent<Text>();
-        Quality2TextField.text = clothlist[0].Quality2;
+        Quality2TextField.text = clothesInfoList[0].Quality2;
 
         Quality3TextField = GameObject.Find("QRCode3_Quality2").GetComponent<Text>();
-        Quality3TextField.text = clothlist[0].Quality3;
+        Quality3TextField.text = clothesInfoList[0].Quality3;
 
         Quality4TextField = GameObject.Find("QRCode3_Quality2").GetComponent<Text>();
-        Quality4TextField.text = clothlist[0].Quality4;
-        //URLTextField.text = clothlist[0].URL;
+        Quality4TextField.text = clothesInfoList[0].Quality4;
+        //URLTextField.text = clothesInfoList[0].URL;
 
         Debug.Log("ShowData - QRCode3 End");
     }
@@ -116,30 +116,30 @@ public class ShowData : MonoBehaviour
     public void CallDatabaseQRCode4()
     {
         DB = GameObject.Find("DatabaseHandler").GetComponent<Database>();
-        List<Cloth> clothlist;
-        clothlist = DB.GetClothListQRCode4();
+        List<Cloth> clothesInfoList;
+        clothesInfoList = DB.GetclothesInfoListQRCode4();
 
         nameTextField = GameObject.Find("QRCode4_Name").GetComponent<Text>();
-        nameTextField.text = clothlist[0].Name;
+        nameTextField.text = clothesInfoList[0].Name;
 
         PriceTextField = GameObject.Find("QRCode4_Price").GetComponent<Text>();
-        PriceTextField.text = clothlist[0].Price;
+        PriceTextField.text = clothesInfoList[0].Price;
 
         DescriptionTextField = GameObject.Find("QRCode4_Description").GetComponent<Text>();
-        DescriptionTextField.text = clothlist[0].Description;
+        DescriptionTextField.text = clothesInfoList[0].Description;
 
         QualityTextField = GameObject.Find("QRCode4_Quality").GetComponent<Text>();
-        QualityTextField.text = clothlist[0].Quality;
+        QualityTextField.text = clothesInfoList[0].Quality;
 
         Quality2TextField = GameObject.Find("QRCode4_Quality2").GetComponent<Text>();
-        Quality2TextField.text = clothlist[0].Quality2;
+        Quality2TextField.text = clothesInfoList[0].Quality2;
 
         Quality3TextField = GameObject.Find("QRCode4_Quality3").GetComponent<Text>();
-        Quality3TextField.text = clothlist[0].Quality3;
+        Quality3TextField.text = clothesInfoList[0].Quality3;
 
         Quality4TextField = GameObject.Find("QRCode4_Quality4").GetComponent<Text>();
-        Quality4TextField.text = clothlist[0].Quality4;
-        //URLTextField.text = clothlist[0].URL;
+        Quality4TextField.text = clothesInfoList[0].Quality4;
+        //URLTextField.text = clothesInfoList[0].URL;
 
         Debug.Log("ShowData - QRCode4 End");
     }

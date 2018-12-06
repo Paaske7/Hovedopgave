@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class SettingsScript : MonoBehaviour {
 
-    public static bool Sexchange;
+    public static bool isMale;
     public static bool showTutorial = false;
 	
-	public void SettingsChangeSexMale()
+	public void ChangeSexToMale()
     {
-        Sexchange = true;
+        isMale = true;
         Debug.Log("Male");
+        Debug.Log("Settings" + isMale);
     }
-    public void SettingsChangeSexFemale()
+    public void ChangeSexToFemale()
     {
-        Sexchange = false;
+        isMale = false;
         Debug.Log("Female");
+        Debug.Log("Settings" + isMale);
     }
 
     public void ShowToturial()
