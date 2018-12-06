@@ -1,12 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MoveModel : MonoBehaviour {
 
     // Mikael Paaske
-    private GameObject model;
-    private GameObject model2;
     float speed = 6.0f;
     public GameObject[] respawns;
 

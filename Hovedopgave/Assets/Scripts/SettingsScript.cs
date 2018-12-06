@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SettingsScript : MonoBehaviour {
 
     public static bool isMale;
-    public static bool showTutorial = false;
+    public static bool showTutorial;
 	
 	public void ChangeSexToMale()
     {

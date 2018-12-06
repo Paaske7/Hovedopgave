@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -248,7 +248,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &130092621
 GameObject:
@@ -336,7 +336,6 @@ GameObject:
   - component: {fileID: 175453120}
   - component: {fileID: 175453119}
   - component: {fileID: 175453118}
-  - component: {fileID: 175453117}
   m_Layer: 5
   m_Name: MalePantsBlue
   m_TagString: Untagged
@@ -356,28 +355,13 @@ RectTransform:
   m_Children:
   - {fileID: 531950693}
   m_Father: {fileID: 787935066}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 20, y: -153}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &175453117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 175453115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 427eb7a46738f4847a6171ce012ae529, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  productPlaceHolder: {fileID: 0}
-  defaultModel: 1
-  getSexchangeFromProductSwitcher: 1
-  modelPlaceHolder: {fileID: 0}
 --- !u!114 &175453118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -644,7 +628,7 @@ RectTransform:
   m_Children:
   - {fileID: 852183255}
   m_Father: {fileID: 787935066}
-  m_RootOrder: 7
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -887,39 +871,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 565168155}
   m_CullTransparentMesh: 0
---- !u!1 &655924845
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 655924846}
-  m_Layer: 5
-  m_Name: Product Catalog
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &655924846
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 655924845}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 787935066}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &787935062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,21 +956,20 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 655924846}
+  - {fileID: 1793644082}
+  - {fileID: 440108269}
+  - {fileID: 1544625631}
   - {fileID: 1460532297}
   - {fileID: 1482291267}
   - {fileID: 175453116}
   - {fileID: 1631745705}
   - {fileID: 1629143772}
-  - {fileID: 1793644082}
-  - {fileID: 440108269}
-  - {fileID: 1544625631}
   - {fileID: 1023062152}
   - {fileID: 1321234649}
   - {fileID: 1882108371}
   - {fileID: 1289975115}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1253,7 +1203,6 @@ GameObject:
   - component: {fileID: 1023062156}
   - component: {fileID: 1023062155}
   - component: {fileID: 1023062154}
-  - component: {fileID: 1023062153}
   m_Layer: 5
   m_Name: FemaleBlackShoes
   m_TagString: Untagged
@@ -1273,28 +1222,13 @@ RectTransform:
   m_Children:
   - {fileID: 970929744}
   m_Father: {fileID: 787935066}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 20, y: -90}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1023062153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1023062151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 427eb7a46738f4847a6171ce012ae529, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  productPlaceHolder: {fileID: 0}
-  defaultModel: 1
-  getSexchangeFromProductSwitcher: 1
-  modelPlaceHolder: {fileID: 0}
 --- !u!114 &1023062154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1389,9 +1323,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1033027092}
-  - component: {fileID: 1033027093}
   - component: {fileID: 1033027095}
   - component: {fileID: 1033027091}
+  - component: {fileID: 1033027093}
   - component: {fileID: 1033027094}
   m_Layer: 0
   m_Name: GameController
@@ -1446,9 +1380,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ee6d4e577fb7043b292d60389f0308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayProduct: {fileID: 0}
-  modelPlaceHolder: {fileID: 100138, guid: 592461d3832cd2b488047b44930f41d9, type: 3}
-  SelectedButton: {fileID: 1793644081}
 --- !u!114 &1033027094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1460,10 +1391,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 427eb7a46738f4847a6171ce012ae529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productPlaceHolder: {fileID: 0}
-  defaultModel: 1
-  getSexchangeFromProductSwitcher: 1
-  modelPlaceHolder: {fileID: 0}
 --- !u!114 &1033027095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1486,7 +1413,6 @@ GameObject:
   - component: {fileID: 1289975119}
   - component: {fileID: 1289975118}
   - component: {fileID: 1289975117}
-  - component: {fileID: 1289975116}
   m_Layer: 5
   m_Name: FemaleGreenJacket
   m_TagString: Untagged
@@ -1506,28 +1432,13 @@ RectTransform:
   m_Children:
   - {fileID: 1482041843}
   m_Father: {fileID: 787935066}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 20, y: -288}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1289975116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1289975114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 427eb7a46738f4847a6171ce012ae529, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  productPlaceHolder: {fileID: 0}
-  defaultModel: 1
-  getSexchangeFromProductSwitcher: 1
-  modelPlaceHolder: {fileID: 0}
 --- !u!114 &1289975117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1625,7 +1536,6 @@ GameObject:
   - component: {fileID: 1321234653}
   - component: {fileID: 1321234652}
   - component: {fileID: 1321234651}
-  - component: {fileID: 1321234650}
   m_Layer: 5
   m_Name: FemaleBlackUnderPants
   m_TagString: Untagged
@@ -1645,28 +1555,13 @@ RectTransform:
   m_Children:
   - {fileID: 425594781}
   m_Father: {fileID: 787935066}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 20, y: -222}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1321234650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1321234648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 427eb7a46738f4847a6171ce012ae529, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  productPlaceHolder: {fileID: 0}
-  defaultModel: 1
-  getSexchangeFromProductSwitcher: 1
-  modelPlaceHolder: {fileID: 0}
 --- !u!114 &1321234651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1860,7 +1755,7 @@ RectTransform:
   m_Children:
   - {fileID: 2143795085}
   m_Father: {fileID: 787935066}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2039,7 +1934,6 @@ GameObject:
   - component: {fileID: 1482291270}
   - component: {fileID: 1482291269}
   - component: {fileID: 1482291268}
-  - component: {fileID: 1482291271}
   m_Layer: 5
   m_Name: MaleBlackJacket
   m_TagString: Untagged
@@ -2059,7 +1953,7 @@ RectTransform:
   m_Children:
   - {fileID: 1949102505}
   m_Father: {fileID: 787935066}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2152,21 +2046,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1482291266}
   m_CullTransparentMesh: 0
---- !u!114 &1482291271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1482291266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 427eb7a46738f4847a6171ce012ae529, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  productPlaceHolder: {fileID: 0}
-  defaultModel: 1
-  getSexchangeFromProductSwitcher: 1
-  modelPlaceHolder: {fileID: 0}
 --- !u!1 &1544625630
 GameObject:
   m_ObjectHideFlags: 0
@@ -2197,7 +2076,7 @@ RectTransform:
   m_Children:
   - {fileID: 130092622}
   m_Father: {fileID: 787935066}
-  m_RootOrder: 8
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2301,7 +2180,6 @@ GameObject:
   - component: {fileID: 1629143776}
   - component: {fileID: 1629143775}
   - component: {fileID: 1629143774}
-  - component: {fileID: 1629143773}
   m_Layer: 5
   m_Name: MaleUnderPantsBlack
   m_TagString: Untagged
@@ -2321,28 +2199,13 @@ RectTransform:
   m_Children:
   - {fileID: 56482206}
   m_Father: {fileID: 787935066}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 20, y: -288}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1629143773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1629143771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 427eb7a46738f4847a6171ce012ae529, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  productPlaceHolder: {fileID: 0}
-  defaultModel: 1
-  getSexchangeFromProductSwitcher: 1
-  modelPlaceHolder: {fileID: 0}
 --- !u!114 &1629143774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2440,7 +2303,6 @@ GameObject:
   - component: {fileID: 1631745709}
   - component: {fileID: 1631745708}
   - component: {fileID: 1631745707}
-  - component: {fileID: 1631745706}
   m_Layer: 5
   m_Name: MaleTShirtWhite
   m_TagString: Untagged
@@ -2460,28 +2322,13 @@ RectTransform:
   m_Children:
   - {fileID: 565168156}
   m_Father: {fileID: 787935066}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 20, y: -222}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1631745706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1631745704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 427eb7a46738f4847a6171ce012ae529, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  productPlaceHolder: {fileID: 0}
-  defaultModel: 1
-  getSexchangeFromProductSwitcher: 1
-  modelPlaceHolder: {fileID: 0}
 --- !u!114 &1631745707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2580,7 +2427,7 @@ GameObject:
   - component: {fileID: 1793644084}
   - component: {fileID: 1793644083}
   m_Layer: 5
-  m_Name: ModelToggle
+  m_Name: SwitchSex
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2598,7 +2445,7 @@ RectTransform:
   m_Children:
   - {fileID: 207467353}
   m_Father: {fileID: 787935066}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2777,7 +2624,6 @@ GameObject:
   - component: {fileID: 1882108375}
   - component: {fileID: 1882108374}
   - component: {fileID: 1882108373}
-  - component: {fileID: 1882108372}
   m_Layer: 5
   m_Name: FemaleBlueDress
   m_TagString: Untagged
@@ -2797,28 +2643,13 @@ RectTransform:
   m_Children:
   - {fileID: 1817405289}
   m_Father: {fileID: 787935066}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 20, y: -153}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1882108372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1882108370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 427eb7a46738f4847a6171ce012ae529, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  productPlaceHolder: {fileID: 0}
-  defaultModel: 1
-  getSexchangeFromProductSwitcher: 1
-  modelPlaceHolder: {fileID: 0}
 --- !u!114 &1882108373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2905,34 +2736,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1882108370}
   m_CullTransparentMesh: 0
---- !u!1 &1907856914
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1907856915}
-  m_Layer: 0
-  m_Name: Product Models
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1907856915
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1907856914}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 277, y: 436, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1949102504
 GameObject:
   m_ObjectHideFlags: 0

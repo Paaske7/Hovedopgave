@@ -17,10 +17,6 @@ public class MenuChanger : MonoBehaviour {
     }
     public void changemenuscenePoseScene()
     {
-        SceneManager.LoadScene("PoseScene");
-    }
-    public void changemenusceneWishList()
-    {
-        SceneManager.LoadScene("WishListScene");
+        SceneManager.LoadScene("ShowroomScene");
     }
 }

@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
+﻿using UnityEngine;
 public class TutorialScript : MonoBehaviour
 {
     // Mikael Paaske
@@ -32,7 +28,7 @@ public class TutorialScript : MonoBehaviour
         toturialText8 = GameObject.Find("TutorialText8");
 
 
-        if (showToturial == true || PlayerPrefs.GetInt("FIRSTTIMEOPENING", 1) == 1)
+        if (showToturial || PlayerPrefs.GetInt("FIRSTTIMEOPENING", 1) == 1)
         {
             ShowToturial();
             // Gør den False igen, da tutorialen nu er blevet vist en gang mere. 
