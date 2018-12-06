@@ -15,7 +15,13 @@ public class ShowData : MonoBehaviour
     public Text Quality4TextField;
     //public Text URLTextField;
     private Database DB;
+    private CopyToClipboard _copyToClipboard;
 
+    public void Start()
+    {
+        _copyToClipboard = GameObject.Find("GameController").GetComponent<CopyToClipboard>();
+
+    }
     public void CallDatabaseQRCode1()
     {
         {
@@ -44,8 +50,10 @@ public class ShowData : MonoBehaviour
             Quality4TextField = GameObject.Find("QRCode1_Quality4").GetComponent<Text>();
             Quality4TextField.text = clothesInfoList[0].Quality4;
 
+            _copyToClipboard.ProductUrl = clothesInfoList[0].URL;
+
             //URLTextField.text = clothesInfoList[0].URL;
-            //GameController.GetComponent<copypaste>().ProductUrl = clothesInfoList[0].URL;
+            //GameController.GetComponent<CopyToClipboard>().ProductUrl = clothesInfoList[0].URL;
             Debug.Log("Product URL SD: " + clothesInfoList[0].URL);
 
             Debug.Log("ShowData - QRCode1 End");
@@ -77,6 +85,8 @@ public class ShowData : MonoBehaviour
 
         Quality4TextField = GameObject.Find("QRCode2_Quality4").GetComponent<Text>();
         Quality4TextField.text = clothesInfoList[0].Quality4;
+
+        _copyToClipboard.ProductUrl = clothesInfoList[0].URL;
         //URLTextField.text = clothesInfoList[0].URL;
 
         Debug.Log("ShowData - QRCode2 End");
@@ -108,6 +118,8 @@ public class ShowData : MonoBehaviour
 
         Quality4TextField = GameObject.Find("QRCode3_Quality2").GetComponent<Text>();
         Quality4TextField.text = clothesInfoList[0].Quality4;
+
+        _copyToClipboard.ProductUrl = clothesInfoList[0].URL;
         //URLTextField.text = clothesInfoList[0].URL;
 
         Debug.Log("ShowData - QRCode3 End");
@@ -139,6 +151,8 @@ public class ShowData : MonoBehaviour
 
         Quality4TextField = GameObject.Find("QRCode4_Quality4").GetComponent<Text>();
         Quality4TextField.text = clothesInfoList[0].Quality4;
+
+        _copyToClipboard.ProductUrl = clothesInfoList[0].URL;
         //URLTextField.text = clothesInfoList[0].URL;
 
         Debug.Log("ShowData - QRCode4 End");
