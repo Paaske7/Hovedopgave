@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class CopyToClipboard : MonoBehaviour {
+public class ProductUrlHandler : MonoBehaviour {
     //Thomas Nielsen
     public string ProductUrl;
 
@@ -25,5 +25,9 @@ public class CopyToClipboard : MonoBehaviour {
      
         //Fjern popupvinduet fra scenen efter 3 sekunder
         Destroy(tempWindow,3f);
+    }
+    public void OpenURL()
+    {
+        Application.OpenURL(ProductUrl);
     }
 }

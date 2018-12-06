@@ -1208,6 +1208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1295357766ff843a4123aebd09689c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ProductUrl: 
 --- !u!114 &222545548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5258,8 +5259,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 222545547}
-        m_MethodName: OpenURLQRCode1
+      - m_Target: {fileID: 222545548}
+        m_MethodName: OpenURL
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7427,8 +7428,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 222545547}
-        m_MethodName: OpenURLQRCode3
+      - m_Target: {fileID: 222545548}
+        m_MethodName: OpenURL
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9012,8 +9013,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 222545547}
-        m_MethodName: OpenURLQRCode2
+      - m_Target: {fileID: 222545548}
+        m_MethodName: OpenURL
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10749,8 +10750,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 222545547}
-        m_MethodName: OpenURLQRCode4
+      - m_Target: {fileID: 222545548}
+        m_MethodName: OpenURL
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
