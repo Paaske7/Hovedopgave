@@ -2,6 +2,8 @@
     public class ProductItem
     {
     // Mikael Paaske
+    // Alle properties et tøj indeholder
+
         public string Name { get; set; }
         public string Description { get; set; }
         public string Price { get; set; }

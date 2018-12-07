@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuChanger : MonoBehaviour {
     // Mikael Paaske
+    // Disse ændrer scenen i vores mobilaplikation
+
     public void changemenusceneMainMenu()
     {
         SceneManager.LoadScene("MainMenuScene");

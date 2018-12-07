@@ -18,17 +18,19 @@ public class StarterSceneScript : MonoBehaviour {
       splashImage.canvasRenderer.SetAlpha(0.0f);
 
         FadeIn();
-        yield return new WaitForSeconds(3.5f); // Suspends the coroutine execution for the given amount of seconds using scaled time.
+        yield return new WaitForSeconds(3.5f); // Venter 3.5 sekunder
         FadeOut();
-        yield return new WaitForSeconds(2.0f);
-        menuChanger.changemenusceneMainMenu();
+        yield return new WaitForSeconds(2.0f); // Venter 2.0 sekunder
+        menuChanger.changemenusceneMainMenu(); // Skifter til hovedmenu scenen
     }
     void FadeIn()
     {
+        // skifter alpha på vores splashimage
         splashImage.CrossFadeAlpha(1.0f, 2.5f, false);
     }
     void FadeOut()
     {
+        // skifter alpha på vores splashimage
         splashImage.CrossFadeAlpha(0.0f, 2.5f, false);
 
     }

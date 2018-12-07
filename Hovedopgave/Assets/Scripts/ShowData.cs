@@ -4,13 +4,13 @@ using UnityEngine.UI;
 
 public class ShowData : MonoBehaviour
 {
+    // Mikael Paaske
     private ProductUrlHandler _productUrlHandler;
     private List<ProductItem> clothesInfoList;
     private Database DB;
 
     public Text DescriptionTextField;
 
-    //Mikael Paaske
     public Text nameTextField;
     public Text PriceTextField;
     public Text FabricTextField1;
@@ -26,6 +26,7 @@ public class ShowData : MonoBehaviour
 
     public void CallDatabaseQRCode1()
     {
+        // Henter alt data fra properties i ProductItem og sætter dem på vores tekst gameobjekter i scenen
         clothesInfoList = DB.GetclothesInfoListQRCode1();
 
         nameTextField = GameObject.Find("QRCode1_Name").GetComponent<Text>();
@@ -52,11 +53,11 @@ public class ShowData : MonoBehaviour
         _productUrlHandler.ProductUrl = clothesInfoList[0].URL;
 
         clothesInfoList.Clear();
-        Debug.Log("ShowData - QRCode1 End");
     }
 
     public void CallDatabaseQRCode2()
     {
+        // Henter alt data fra properties i ProductItem og sætter dem på vores tekst gameobjekter i scenen
         clothesInfoList = DB.GetclothesInfoListQRCode2();
 
         nameTextField = GameObject.Find("QRCode2_Name").GetComponent<Text>();
@@ -83,11 +84,11 @@ public class ShowData : MonoBehaviour
         _productUrlHandler.ProductUrl = clothesInfoList[0].URL;
 
         clothesInfoList.Clear();
-        Debug.Log("ShowData - QRCode2 End");
     }
 
     public void CallDatabaseQRCode3()
     {
+        // Henter alt data fra properties i ProductItem og sætter dem på vores tekst gameobjekter i scenen
         clothesInfoList = DB.GetclothesInfoListQRCode3();
 
         nameTextField = GameObject.Find("QRCode3_Name").GetComponent<Text>();
@@ -114,11 +115,11 @@ public class ShowData : MonoBehaviour
         _productUrlHandler.ProductUrl = clothesInfoList[0].URL;
 
         clothesInfoList.Clear();
-        Debug.Log("ShowData - QRCode3 End");
     }
 
     public void CallDatabaseQRCode4()
     {
+        // Henter alt data fra properties i ProductItem og sætter dem på vores tekst gameobjekter i scenen
         clothesInfoList = DB.GetclothesInfoListQRCode4();
 
         nameTextField = GameObject.Find("QRCode4_Name").GetComponent<Text>();
@@ -145,6 +146,5 @@ public class ShowData : MonoBehaviour
         _productUrlHandler.ProductUrl = clothesInfoList[0].URL;
 
         clothesInfoList.Clear();
-        Debug.Log("ShowData - QRCode4 End");
     }
 }

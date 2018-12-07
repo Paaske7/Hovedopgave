@@ -28,6 +28,7 @@ public class TutorialScript : MonoBehaviour
         toturialText8 = GameObject.Find("TutorialText8");
 
 
+        // hvis showTutorial er true eller det første gang appen er blevet åbent bliver tutorial vist for brugeren
         if (showToturial || PlayerPrefs.GetInt("FIRSTTIMEOPENING", 1) == 1)
         {
             ShowToturial();
@@ -52,7 +53,6 @@ public class TutorialScript : MonoBehaviour
         toturialText6.SetActive(true);
         toturialText7.SetActive(true);
         toturialText8.SetActive(true);
-        Debug.Log("First Time Opening");
 
         // Sætter "First Time Opening til False
         PlayerPrefs.SetInt("FIRSTTIMEOPENING", 0);
@@ -61,7 +61,6 @@ public class TutorialScript : MonoBehaviour
     void DontShowTutorial()
     {
         // Sætter dem til False, det vil sige at de ikke bliver synlige.
-        Debug.Log("NOT First Time Opening");
         toturialText1.SetActive(false);
         toturialText2.SetActive(false);
         toturialText3.SetActive(false);
@@ -70,7 +69,6 @@ public class TutorialScript : MonoBehaviour
         toturialText6.SetActive(false);
         toturialText7.SetActive(false);
         toturialText8.SetActive(false);
-        //Do your stuff here
     }
     // Fjerner kun GameObjekter der har en Box Collider
     void Update()

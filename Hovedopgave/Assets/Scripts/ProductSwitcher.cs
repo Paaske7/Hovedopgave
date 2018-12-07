@@ -3,8 +3,6 @@
 public class ProductSwitcher : MonoBehaviour
 {
     // Mikael Paaske
-    // Laver en ny bool og sætter den = bool fra SettingsScript
-
     private GameObject modelPlaceHolder;
     private GameObject button1Male;
     private GameObject button2Male;
@@ -15,27 +13,9 @@ public class ProductSwitcher : MonoBehaviour
     private GameObject button3Female;
     private GameObject button4Female;
 
-    // Thomas Nielsen og Mikael Paaske
-
-    /*Load alle nye modeller ind i projektet under 'Models>Products>data/sæson
-    Alle tilgængelige produkter findes fra databasen og vises i en menu så brugeren kan vælge
-    Når brugeren vælger et produkt bruges info fra DB til at finde modelNavnet
-    Modellen bliver vist i Unity
-    brugeren kan vælge et nyt produkt hvorefter den forrige bliver fjernet(Man kunne lave noget kategorisering så man både kan vise bukser og trøjer samtidig)
-    lav seperat kode til visning og valg af produkter
-    grid med billed og tekst der virker som en knap til at vælge produkt med
-    laves automatisk baseret på de tilgængelige produkter
-    Mobil controls er lidt bæ
-    Kan ikke kigge nedefra
-    lav knap til reset af kamera?
-    lav simple pile til rotering?
-    sæt en fast scale for prefabs så en par jeans ikke er 8 meter høj*/
-
     private void Start()
     {
-        Debug.Log("Productswitcher isMale:" + SettingsScript.isMale);
-        // Mikael Paaske
-        //DestroyAll();
+        // Finder alle knapperne i scenen.
         button1Male = GameObject.Find("MaleBlackJacket");
         button2Male = GameObject.Find("MalePantsBlue");
         button3Male = GameObject.Find("MaleTShirtWhite");
@@ -51,22 +31,26 @@ public class ProductSwitcher : MonoBehaviour
 
     public void ChangeSex()
     {
+        // Ændrer boolen fra Settingsscript til det omvendte
         SettingsScript.isMale = !SettingsScript.isMale;
-        DestroyAll();
-        Debug.Log("SexChange isMale:" + SettingsScript.isMale);
 
+        // Sletter alle modeller i scenen
+        DestroyAll();
+
+        // Loader enten den nøgne mand eller dame udfra boolen fra Settingsscript
         modelPlaceHolder =
             Resources.Load<GameObject>(SettingsScript.isMale ? "Prefabs/MaleNaked" : "Prefabs/FemaleNaked");
-        Debug.Log("modelPlaceHolder :" + modelPlaceHolder.name);
 
+        // Viser hvilke knapper der skal vises i scenen
         SetButtonStates();
 
+        // instansierer modellen i scenen
         Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
-        Debug.Log("Model er spawned");
     }
 
     public void SetButtonStates()
     {
+        // Funktion at vise knapperne i scenen for enten om det er en mand der bliver vist eller en dame
         button1Male.SetActive(SettingsScript.isMale);
         button2Male.SetActive(SettingsScript.isMale);
         button3Male.SetActive(SettingsScript.isMale);
@@ -79,6 +63,7 @@ public class ProductSwitcher : MonoBehaviour
     }
     private void DestroyAll()
     {
+        // Sletter alle modeller i scenen
         foreach (var Obj in Resources.FindObjectsOfTypeAll<GameObject>())
             if (Obj.name == "FemaleNaked(Clone)" || Obj.name == "FemaleBlackShoes(Clone)" ||
                 Obj.name == "FemaleBlackUnderPants(Clone)" ||

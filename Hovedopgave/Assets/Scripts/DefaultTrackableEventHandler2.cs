@@ -6,6 +6,7 @@ using Vuforia;
 public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandler
 {
     // Mikael Paaske
+    // Vuforias egen kode hvor Mikael har tilføjet logik
     #region PROTECTED_MEMBER_VARIABLES
     protected TrackableBehaviour mTrackableBehaviour;
    
@@ -13,14 +14,13 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
     protected TrackableBehaviour.Status m_NewStatus;
 
     ShowData showData;
-    //private ShowData showData = new ShowData(); - Hvis denne bliver brugt, kommer fejlen you are trying to create a monobehaviour using the 'new' keyword.
-    // Derfor bliver den oprettet på linje 15 istedet og bliver fundet på linje 24.
-    #endregion // PROTECTED_MEMBER_VARIABLES
+    #endregion
 
     #region UNITY_MONOBEHAVIOUR_METHODS
 
     protected virtual void Start()
     {
+        // Henter scriptet ShowData
         showData = gameObject.AddComponent<ShowData>();
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour)
@@ -33,14 +33,10 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
             mTrackableBehaviour.UnregisterTrackableEventHandler(this);
     }
 
-    #endregion // UNITY_MONOBEHAVIOUR_METHODS
+    #endregion
 
     #region PUBLIC_METHODS
 
-    /// <summary>
-    ///     Implementation of the ITrackableEventHandler function called when the
-    ///     tracking state changes.
-    /// </summary>
     public void OnTrackableStateChanged(
 
         TrackableBehaviour.Status previousStatus,
@@ -48,8 +44,6 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
     {
         m_PreviousStatus = previousStatus;
         m_NewStatus = newStatus;
-
-
 
         if (newStatus == TrackableBehaviour.Status.DETECTED ||
             newStatus == TrackableBehaviour.Status.TRACKED ||
@@ -66,14 +60,11 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
         }
         else
         {
-            // For combo of previousStatus=UNKNOWN + newStatus=UNKNOWN|NOT_FOUND
-            // Vuforia is starting, but tracking has not been lost or found yet
-            // Call OnTrackingLost() to hide the augmentations
             OnTrackingLost();
         }
     }
 
-    #endregion // PUBLIC_METHODS
+    #endregion
 
     #region PROTECTED_METHODS
 
@@ -83,19 +74,16 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
         var colliderComponents = GetComponentsInChildren<Collider>(true);
         var canvasComponents = GetComponentsInChildren<Canvas>(true);
 
-        // Enable rendering:
         foreach (var component in rendererComponents)
             component.enabled = true;
 
-        // Enable colliders:
         foreach (var component in colliderComponents)
             component.enabled = true;
 
-        // Enable canvas':
         foreach (var component in canvasComponents)
             component.enabled = true;
 
-        Debug.Log("Calling Database");
+        // Kalder database udfra hvilken Image Target den finder i Vuforias database
         if (mTrackableBehaviour.TrackableName == "QRCode1")
         {
             showData.CallDatabaseQRCode1();
@@ -117,8 +105,6 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
             Debug.Log("Kunne ikke finde navnet");
         }
 
-
-
     }
     protected virtual void OnTrackingLost()
     {
@@ -126,17 +112,14 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
         var colliderComponents = GetComponentsInChildren<Collider>(true);
         var canvasComponents = GetComponentsInChildren<Canvas>(true);
 
-        // Disable rendering:
         foreach (var component in rendererComponents)
             component.enabled = false;
 
-        // Disable colliders:
         foreach (var component in colliderComponents)
             component.enabled = false;
 
-        // Disable canvas':
         foreach (var component in canvasComponents)
             component.enabled = false;
     }
-        #endregion // PROTECTED_METHODS
+        #endregion 
 }

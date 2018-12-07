@@ -22,6 +22,8 @@ public class ProductUrlHandler : MonoBehaviour {
     }
     public void OpenURL()
     {
+        // Åbner URL fra produktet
+        // Bliver ikke brugt pt.
         Application.OpenURL(ProductUrl);
     }
 }

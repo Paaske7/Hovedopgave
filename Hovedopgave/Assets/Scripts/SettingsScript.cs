@@ -2,24 +2,24 @@
 
 public class SettingsScript : MonoBehaviour {
 
+    // Mikael Paaske
     public static bool isMale;
     public static bool showTutorial;
 	
 	public void ChangeSexToMale()
     {
+        // Hvis tryk på knappen "Mand" i indstillinger menuen bliver boolen sat til true
         isMale = true;
-        Debug.Log("Male");
-        Debug.Log("Settings" + isMale);
     }
     public void ChangeSexToFemale()
     {
+        // Hvis tryk på knappen "Kvinde" i indstillinger menuen bliver boolen sat til false
         isMale = false;
-        Debug.Log("Female");
-        Debug.Log("Settings" + isMale);
     }
 
     public void ShowToturial()
     {
+        // Sætter boolen til True, så tutorial kan blive vist igen
         showTutorial = true;
     }
 }

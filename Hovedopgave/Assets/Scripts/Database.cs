@@ -7,11 +7,8 @@ public class Database : MonoBehaviour
 {
     private SqlConnection connection;
     // Mikael Paaske
-    //private string connectionString = @"Data Source = tcp:hovedopgave.database.windows.net,1433; 
-    // user id = Mikael;
-    // password = Paaske77;
-    // Initial Catalog = Clothing;";
 
+    // Connectionstring til database
     private readonly string connectionString = @"Data Source = mssql7.gear.host; 
      user id = clothing;
      password = Paaske77!;
@@ -20,12 +17,14 @@ public class Database : MonoBehaviour
 
     private void Connection()
     {
+        // Opretter forbindelse til database
         connection = new SqlConnection(connectionString);
         Debug.Log("Database - Connection");
     }
 
     public List<ProductItem> GetclothesInfoListQRCode1()
     {
+        // Henter alt information om tøjet hvor navnet er WOODBIRD STEFFEN TWILL PANT fra databasen og sætter det til vores properties i ProductItem
         var name = "WOODBIRD STEFFEN TWILL PANT";
         Connection();
         Debug.Log("Database - Get clothesInfoList");
@@ -54,22 +53,13 @@ public class Database : MonoBehaviour
                     URL = cloth["URL"].ToString()
                 });
 
-        //foreach (var Clothing in clothesInfoList)
-        //{
-        //    Debug.Log(Clothing.Name);
-        //    Debug.Log(Clothing.Price);
-        //    Debug.Log(Clothing.Description);
-        //    Debug.Log(Clothing.Fabric1);
-        //    Debug.Log(Clothing.Fabric2);
-        //    Debug.Log(Clothing.URL);
-        //}
-
         return clothesInfoList;
     }
 
 
     public List<ProductItem> GetclothesInfoListQRCode2()
     {
+        // Henter alt information om tøjet hvor navnet er PATAGONIA BAGGIES fra databasen og sætter det til vores properties i ProductItem
         var name = "PATAGONIA BAGGIES";
         Connection();
         Debug.Log("Database - Get clothesInfoList");
@@ -98,13 +88,12 @@ public class Database : MonoBehaviour
                     URL = cloth["URL"].ToString()
                 });
 
-        //foreach (var Clothing in clothesInfoList) Debug.Log(Clothing.Name);
-        //Debug.Log(clothesInfoList[0].URL);
         return clothesInfoList;
     }
 
     public List<ProductItem> GetclothesInfoListQRCode3()
     {
+        // Henter alt information om tøjet hvor navnet er RAINS 1202 fra databasen og sætter det til vores properties i ProductItem
         var name = "RAINS 1202";
         Connection();
         Debug.Log("Database - Get clothesInfoList");
@@ -133,13 +122,12 @@ public class Database : MonoBehaviour
                     URL = cloth["URL"].ToString()
                 });
 
-        //foreach (var Clothing in clothesInfoList) Debug.Log(Clothing.Name);
-
         return clothesInfoList;
     }
 
     public List<ProductItem> GetclothesInfoListQRCode4()
     {
+        // Henter alt information om tøjet hvor navnet er GANNI BARRA CREPE TWIST fra databasen og sætter det til vores properties i ProductItem
         var name = "GANNI BARRA CREPE TWIST";
         Connection();
         Debug.Log("Database - Get clothesInfoList");
@@ -167,8 +155,6 @@ public class Database : MonoBehaviour
                     Fabric4 = cloth["fabric4"].ToString(),
                     URL = cloth["URL"].ToString()
                 });
-
-        //foreach (var Clothing in clothesInfoList) Debug.Log(Clothing.Name);
 
         return clothesInfoList;
     }
