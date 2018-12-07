@@ -33,7 +33,7 @@ public class ShowData : MonoBehaviour
         nameTextField.text = clothesInfoList[0].Name;
 
         PriceTextField = GameObject.Find("QRCode1_Price").GetComponent<Text>();
-        PriceTextField.text = clothesInfoList[0].Price;
+        PriceTextField.text = clothesInfoList[0].Price +" kroner";
 
         DescriptionTextField = GameObject.Find("QRCode1_Description").GetComponent<Text>();
         DescriptionTextField.text = clothesInfoList[0].Description;
@@ -64,7 +64,7 @@ public class ShowData : MonoBehaviour
         nameTextField.text = clothesInfoList[0].Name;
 
         PriceTextField = GameObject.Find("QRCode2_Price").GetComponent<Text>();
-        PriceTextField.text = clothesInfoList[0].Price;
+        PriceTextField.text = clothesInfoList[0].Price + " kroner";
 
         DescriptionTextField = GameObject.Find("QRCode2_Description").GetComponent<Text>();
         DescriptionTextField.text = clothesInfoList[0].Description;
@@ -95,7 +95,7 @@ public class ShowData : MonoBehaviour
         nameTextField.text = clothesInfoList[0].Name;
 
         PriceTextField = GameObject.Find("QRCode3_Price").GetComponent<Text>();
-        PriceTextField.text = clothesInfoList[0].Price;
+        PriceTextField.text = clothesInfoList[0].Price + " kroner";
 
         DescriptionTextField = GameObject.Find("QRCode3_Description").GetComponent<Text>();
         DescriptionTextField.text = clothesInfoList[0].Description;
@@ -126,7 +126,7 @@ public class ShowData : MonoBehaviour
         nameTextField.text = clothesInfoList[0].Name;
 
         PriceTextField = GameObject.Find("QRCode4_Price").GetComponent<Text>();
-        PriceTextField.text = clothesInfoList[0].Price;
+        PriceTextField.text = clothesInfoList[0].Price + " kroner";
 
         DescriptionTextField = GameObject.Find("QRCode4_Description").GetComponent<Text>();
         DescriptionTextField.text = clothesInfoList[0].Description;
