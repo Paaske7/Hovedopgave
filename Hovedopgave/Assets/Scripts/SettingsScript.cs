@@ -5,6 +5,7 @@ public class SettingsScript : MonoBehaviour {
     // Mikael Paaske
     public static bool isMale;
     public static bool showTutorial;
+    public static bool openInWebsite;
 	
 	public void ChangeSexToMale()
     {
@@ -21,5 +22,13 @@ public class SettingsScript : MonoBehaviour {
     {
         // Sætter boolen til True, så tutorial kan blive vist igen
         showTutorial = true;
+    }
+    public void WishListOpenInApp()
+    {
+        openInWebsite = false;
+    }
+    public void WishListOpenInWebsite()
+    {
+        openInWebsite = true;
     }
 }
