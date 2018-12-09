@@ -28,6 +28,7 @@ public class ProductUrlHandler : MonoBehaviour {
         else
         {
             // Åben i app
+           // https://forum.unity.com/threads/android-ios-launch-from-within-a-unity-app-another-unity-app.222709/
         }
     }
 
