@@ -19,10 +19,16 @@ public class ProductUrlHandler : MonoBehaviour {
         //Fjern popupvinduet fra scenen efter 3 sekunder
         Destroy(tempWindow,3f);         //erstat med fade som i starterscenescript
 
-    }
-    public void OpenURL()
-    {
+
         // Åbner URL fra produktet
-        Application.OpenURL(ProductUrl);
+        if (SettingsScript.openInWebsite == true)
+        {
+            Application.OpenURL(ProductUrl);
+        }
+        else
+        {
+            // Åben i app
+        }
     }
+
 }
