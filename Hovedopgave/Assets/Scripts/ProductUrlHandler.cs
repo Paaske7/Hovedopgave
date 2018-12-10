@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class ProductUrlHandler : MonoBehaviour {
+public class ProductUrlHandler : MonoBehaviour
+{
     //Thomas Nielsen
     [HideInInspector] public string ProductUrl;
 
@@ -17,19 +18,22 @@ public class ProductUrlHandler : MonoBehaviour {
         tempWindow.transform.SetParent(GameObject.Find("Canvas").transform, false);
 
         //Fjern popupvinduet fra scenen efter 3 sekunder
-        Destroy(tempWindow,3f);         //erstat med fade som i starterscenescript
+        Destroy(tempWindow, 3f);         //erstat med fade som i starterscenescript
 
 
         // Åbner URL fra produktet
-        if (SettingsScript.openInWebsite == true)
+        if (SettingsScript.openInApp == false)
         {
             Application.OpenURL(ProductUrl);
         }
-        else
+        else if (SettingsScript.openInApp == true)
         {
             // Åben i app
-           // https://forum.unity.com/threads/android-ios-launch-from-within-a-unity-app-another-unity-app.222709/
+            // https://forum.unity.com/threads/android-ios-launch-from-within-a-unity-app-another-unity-app.222709/
         }
     }
-
+    public void OpenProductUrl()
+    {   
+            Application.OpenURL(ProductUrl);
+    }
 }

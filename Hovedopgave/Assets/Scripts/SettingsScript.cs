@@ -5,7 +5,7 @@ public class SettingsScript : MonoBehaviour {
     // Mikael Paaske
     public static bool isMale;
     public static bool showTutorial;
-    public static bool openInWebsite;
+    public static bool openInApp;
 	
 	public void ChangeSexToMale()
     {
@@ -25,10 +25,10 @@ public class SettingsScript : MonoBehaviour {
     }
     public void WishListOpenInApp()
     {
-        openInWebsite = false;
+        openInApp = true;
     }
     public void WishListOpenInWebsite()
     {
-        openInWebsite = true;
+        openInApp = false;
     }
 }
