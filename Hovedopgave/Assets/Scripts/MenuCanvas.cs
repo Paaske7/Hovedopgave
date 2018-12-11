@@ -5,7 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MenuCanvas : MonoBehaviour {
+    // Mikael Paaske
 
+    // Instansierer gameobjekter
     private GameObject canvas;
     private GameObject homeButton;
     private GameObject ClothScannerButton;
@@ -15,8 +17,9 @@ public class MenuCanvas : MonoBehaviour {
 
 
 
-    // Use this for initialization
+   
     void Start () {
+        // Finder gameobjekter i scenen
         canvas = GameObject.Find("MenuCanvas");
         homeButton = canvas.transform.Find("HomeButton").gameObject;
         ClothScannerButton = canvas.transform.Find("ClothScannerButton").gameObject;
@@ -25,10 +28,12 @@ public class MenuCanvas : MonoBehaviour {
 
     }
 	
-	// Update is called once per frame
+
 	void Update () {
+        // Finder den aktive scene
         currentScene = SceneManager.GetActiveScene();
 
+        // Ændrer farven på knapperne på canvaset ud fra hvilken scene der er valgt
         if (currentScene.name == "MainMenuScene")
         {
             homeButton.GetComponent<Image>().color = Color.red;
