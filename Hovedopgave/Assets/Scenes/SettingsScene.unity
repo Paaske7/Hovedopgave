@@ -1634,6 +1634,7 @@ MonoBehaviour:
   showSexText: {fileID: 0}
   "\xF8nskeskyenText": {fileID: 0}
   tutorialText: {fileID: 0}
+  changeSexSlider: {fileID: 0}
 --- !u!114 &1072108847
 MonoBehaviour:
   m_ObjectHideFlags: 0

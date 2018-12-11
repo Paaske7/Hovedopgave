@@ -12,6 +12,7 @@ public class SettingsScript : MonoBehaviour {
     public GameObject showSexText;
     public GameObject ønskeskyenText;
     public GameObject tutorialText;
+    public Slider changeSexSlider;
 
     public void Start()
     {
@@ -19,14 +20,26 @@ public class SettingsScript : MonoBehaviour {
         showSexText = canvas.transform.Find("ShowSexText").gameObject;
         ønskeskyenText = canvas.transform.Find("ShowØnskeskyenText").gameObject;
         tutorialText = canvas.transform.Find("ShowToturialText").gameObject;
+        changeSexSlider = GameObject.Find("ChangeSexSlider").GetComponent<Slider>();
 
+        if (isMale == true)
+        {
+            changeSexSlider.value = 1;
+            showSexText.GetComponent<Text>().text = "Mand";
+        }
+        else if (isMale == false)
+        {
+            changeSexSlider.value = 0;
+            showSexText.GetComponent<Text>().text = "Kvinde";
+        }
     }
-	public void ChangeSex()
+
+    public void ChangeSex()
     {
         // Hvis slider bliver rykket til den ene ende, bliver boolen sat til det modsatte af før
         isMale = !isMale;
-
-        // Ændrer gameobjektets tekst ud fra boolen er sand eller falsk
+        Debug.Log(isMale);
+        // Ændrer gameobjektets tekst til det modsatte efter slideren er rykket
         if (isMale == true)
         {
             showSexText.GetComponent<Text>().text = "Mand";
@@ -34,6 +47,7 @@ public class SettingsScript : MonoBehaviour {
         else if (isMale == false)
         {
             showSexText.GetComponent<Text>().text = "Kvinde";
+            PlayerPrefs.SetInt("hej", 0);
         }
     }
 
