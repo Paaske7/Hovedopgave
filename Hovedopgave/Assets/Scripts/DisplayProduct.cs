@@ -5,6 +5,7 @@ public class DisplayProduct : MonoBehaviour
 {
     // Mikael Paaske og Thomas Nielsen
     private GameObject modelPlaceHolder;
+    private GameObject parentPanel;
 
     public void Start()
     {
@@ -15,7 +16,7 @@ public class DisplayProduct : MonoBehaviour
             modelPlaceHolder = Resources.Load<GameObject>("Prefabs/MaleNaked");
             Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
         }
-        else if (!SettingsScript.isMale)
+        else
         {
             // Instansiere den nøgne kvindlige model på graderne 0,180,0
             modelPlaceHolder = Resources.Load<GameObject>("Prefabs/FemaleNaked");
@@ -23,111 +24,146 @@ public class DisplayProduct : MonoBehaviour
         }
     }
 
-    public void ChangeCloth()
+    public void ChangeCurrentProduct()
     {
+        //Fjern alle produkter fra scenen
         DestroyAll();
-        CheckNameAndSpawn();
-    }
 
-    public void CheckNameAndSpawn()
-    {
-        // Checker navnet på knappen der er trykket på
-        if (EventSystem.current.currentSelectedGameObject.name == "MaleBlackJacket")
-            // Hvis modellen allerede findes i scenen, hentes den nøgne model, hvis ikke bliver modellen vist.
-            if (GameObject.Find("MaleBlackJacket(Clone)"))
+        if (SettingsScript.isMale)
+        {
+            parentPanel = GameObject.Find("MaleProducts");
+            //Hvis det er det første knap (product_1) der trykkes
+            if (EventSystem.current.currentSelectedGameObject.name == "Product_1")
             {
-                modelPlaceHolder = Resources.Load<GameObject>("Prefabs/MaleNaked");
-                Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                //Hvis produktet allerede er i scenen
+                if (GameObject.Find("MalePantsBlue(Clone)"))
+                {
+                    modelPlaceHolder = Resources.Load<GameObject>("Prefabs/MaleNaked");
+                    Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                }
+                else
+                {
+                    //spawn produktet
+                    modelPlaceHolder = Resources.Load<GameObject>("Prefabs/MalePantsBlue");
+                    Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                }
+                //skjul produktkataloget
+                parentPanel.SetActive(false);
             }
-            else
-            {
-                modelPlaceHolder = Resources.Load<GameObject>("Prefabs/MaleBlackJacket");
-                Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
-            }
+            //gentages for hver male og female produkt
 
-        if (EventSystem.current.currentSelectedGameObject.name == "MalePantsBlue")
-            if (GameObject.Find("MalePantsBlue(Clone)"))
+            if (EventSystem.current.currentSelectedGameObject.name == "Product_2")
             {
-                modelPlaceHolder = Resources.Load<GameObject>("Prefabs/MaleNaked");
-                Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
-            }
-            else
-            {
-                modelPlaceHolder = Resources.Load<GameObject>("Prefabs/MalePantsBlue");
-                Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
-            }
+                if (GameObject.Find("MaleBlackJacket(Clone)"))
+                {
+                    modelPlaceHolder = Resources.Load<GameObject>("Prefabs/MaleNaked");
+                    Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                }
+                else
+                {
+                    modelPlaceHolder = Resources.Load<GameObject>("Prefabs/MaleBlackJacket");
+                    Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                }
 
-        if (EventSystem.current.currentSelectedGameObject.name == "MaleTShirtWhite")
-            if (GameObject.Find("MaleTShirtWhite(Clone)"))
-            {
-                modelPlaceHolder = Resources.Load<GameObject>("Prefabs/MaleNaked");
-                Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
-            }
-            else
-            {
-                modelPlaceHolder = Resources.Load<GameObject>("Prefabs/MaleTShirtWhite");
-                Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                parentPanel.SetActive(false);
             }
 
-        if (EventSystem.current.currentSelectedGameObject.name == "MaleUnderPantsBlack")
-            if (GameObject.Find("MaleUnderPantsBlack(Clone)"))
+            if (EventSystem.current.currentSelectedGameObject.name == "Product_3")
             {
-                modelPlaceHolder = Resources.Load<GameObject>("Prefabs/MaleNaked");
-                Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
-            }
-            else
-            {
-                modelPlaceHolder = Resources.Load<GameObject>("Prefabs/MaleUnderPantsBlack");
-                Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                if (GameObject.Find("MaleUnderPantsBlack(Clone)"))
+                {
+                    modelPlaceHolder = Resources.Load<GameObject>("Prefabs/MaleNaked");
+                    Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                }
+                else
+                {
+                    modelPlaceHolder = Resources.Load<GameObject>("Prefabs/MaleUnderPantsBlack");
+                    Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                }
+
+                parentPanel.SetActive(false);
             }
 
-        if (EventSystem.current.currentSelectedGameObject.name == "FemaleBlackShoes")
-            if (GameObject.Find("FemaleBlackShoes(Clone)"))
+            if (EventSystem.current.currentSelectedGameObject.name == "Product_4")
             {
-                modelPlaceHolder = Resources.Load<GameObject>("Prefabs/FemaleNaked");
-                Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
-            }
-            else
-            {
-                modelPlaceHolder = Resources.Load<GameObject>("Prefabs/FemaleBlackShoes");
-                Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
-            }
+                if (GameObject.Find("MaleTShirtWhite(Clone)"))
+                {
+                    modelPlaceHolder = Resources.Load<GameObject>("Prefabs/MaleNaked");
+                    Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                }
+                else
+                {
+                    modelPlaceHolder = Resources.Load<GameObject>("Prefabs/MaleTShirtWhite");
+                    Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                }
 
-        if (EventSystem.current.currentSelectedGameObject.name == "FemaleBlackUnderPants")
-            if (GameObject.Find("FemaleBlackUnderPants(Clone)"))
-            {
-                modelPlaceHolder = Resources.Load<GameObject>("Prefabs/FemaleNaked");
-                Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                parentPanel.SetActive(false);
             }
-            else
+        }
+        else
+        {
+            parentPanel = GameObject.Find("FemaleProducts");
+            if (EventSystem.current.currentSelectedGameObject.name == "Product_1")
             {
-                modelPlaceHolder = Resources.Load<GameObject>("Prefabs/FemaleBlackUnderPants");
-                Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
-            }
+                if (GameObject.Find("FemaleBlackShoes(Clone)"))
+                {
+                    modelPlaceHolder = Resources.Load<GameObject>("Prefabs/FemaleNaked");
+                    Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                }
+                else
+                {
+                    modelPlaceHolder = Resources.Load<GameObject>("Prefabs/FemaleBlackShoes");
+                    Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                }
 
-        if (EventSystem.current.currentSelectedGameObject.name == "FemaleBlueDress")
-            if (GameObject.Find("FemaleBlueDress(Clone)"))
-            {
-                modelPlaceHolder = Resources.Load<GameObject>("Prefabs/FemaleNaked");
-                Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                parentPanel.SetActive(false);
             }
-            else
+            else if (EventSystem.current.currentSelectedGameObject.name == "Product_2")
             {
-                modelPlaceHolder = Resources.Load<GameObject>("Prefabs/FemaleBlueDress");
-                Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
-            }
+                if (GameObject.Find("FemaleGreenJacket(Clone)"))
+                {
+                    modelPlaceHolder = Resources.Load<GameObject>("Prefabs/FemaleNaked");
+                    Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                }
+                else
+                {
+                    modelPlaceHolder = Resources.Load<GameObject>("Prefabs/FemaleGreenJacket");
+                    Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                }
 
-        if (EventSystem.current.currentSelectedGameObject.name == "FemaleGreenJacket")
-            if (GameObject.Find("FemaleGreenJacket(Clone)"))
-            {
-                modelPlaceHolder = Resources.Load<GameObject>("Prefabs/FemaleNaked");
-                Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                parentPanel.SetActive(false);
             }
-            else
+            else if (EventSystem.current.currentSelectedGameObject.name == "Product_3")
             {
-                modelPlaceHolder = Resources.Load<GameObject>("Prefabs/FemaleGreenJacket");
-                Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                if (GameObject.Find("FemaleBlackUnderPants(Clone)"))
+                {
+                    modelPlaceHolder = Resources.Load<GameObject>("Prefabs/FemaleNaked");
+                    Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                }
+                else
+                {
+                    modelPlaceHolder = Resources.Load<GameObject>("Prefabs/FemaleBlackUnderPants");
+                    Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                }
+
+                parentPanel.SetActive(false);
             }
+            else if (EventSystem.current.currentSelectedGameObject.name == "Product_4")
+            {
+                if (GameObject.Find("FemaleBlueDress(Clone)"))
+                {
+                    modelPlaceHolder = Resources.Load<GameObject>("Prefabs/FemaleNaked");
+                    Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                }
+                else
+                {
+                    modelPlaceHolder = Resources.Load<GameObject>("Prefabs/FemaleBlueDress");
+                    Instantiate(modelPlaceHolder, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                }
+
+                parentPanel.SetActive(false);
+            }
+        }
     }
 
     public void DestroyAll()
