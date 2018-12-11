@@ -22,6 +22,11 @@ public class MainMenuScript : MonoBehaviour {
         newsText2 = canvas.transform.Find("NewsText2").gameObject;
         newsText3 = canvas.transform.Find("NewsText3").gameObject;
 
+        // Her skal kundes ændrer, hvis nye nyheder skal vises
+        newsText1.GetComponent<Text>().text = "Husk 50% på alt d. 31 Januar!!";
+        newsText2.GetComponent<Text>().text = "Tjek vores Tøj Scanner på vores produkter!";
+        newsText3.GetComponent<Text>().text = "10% rabat på alle underbukser hvis du er medlem af Munk & Co!";
+
         // Tjekker om det er første gang appen er åben, hvis det er ændres tekstfeltets text til velkommen, ellers velkommen tilbage
         if (PlayerPrefs.GetInt("FIRSTTIMEOPENING", 1) == 1)
         {
