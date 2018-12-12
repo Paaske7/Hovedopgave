@@ -21,14 +21,15 @@ public class ProductUrlHandler : MonoBehaviour
         Destroy(tempWindow, 3f);         //erstat med fade som i starterscenescript
 
 
-        // Åbner URL fra produktet
+        Åbner URL fra produktet
         if (SettingsScript.openInApp == false)
         {
             Application.OpenURL(ProductUrl);
         }
         else if (SettingsScript.openInApp == true)
         {
-            // Popop windue med "Kopieret til clipboard - Åben ønskeskyen app.
+            // Åben i app
+            // https://forum.unity.com/threads/android-ios-launch-from-within-a-unity-app-another-unity-app.222709/
         }
     }
     public void OpenProductUrl()
