@@ -28,8 +28,7 @@ public class ProductUrlHandler : MonoBehaviour
         }
         else if (SettingsScript.openInApp == true)
         {
-            // Åben i app
-            // https://forum.unity.com/threads/android-ios-launch-from-within-a-unity-app-another-unity-app.222709/
+            // Popop windue med "Kopieret til clipboard - Åben ønskeskyen app.
         }
     }
     public void OpenProductUrl()
