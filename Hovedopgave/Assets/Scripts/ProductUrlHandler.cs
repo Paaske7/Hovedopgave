@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Threading;
+using UnityEngine;
+
 
 public class ProductUrlHandler : MonoBehaviour
 {
@@ -15,13 +18,12 @@ public class ProductUrlHandler : MonoBehaviour
         //instansier i scenen og brug prefabets gemte position
         GameObject tempWindow = Instantiate(popupWindow, popupWindow.transform.position, Quaternion.identity) as GameObject;
         //Find canvas fra ARcamera og sæt popupvinduet som child - popup vinduet vises ikke hvis det ikke er i et canvas
-        tempWindow.transform.SetParent(GameObject.Find("Canvas").transform, false);
+        tempWindow.transform.SetParent(GameObject.Find("MenuCanvas").transform, false);
 
         //Fjern popupvinduet fra scenen efter 3 sekunder
         Destroy(tempWindow, 3f);         //erstat med fade som i starterscenescript
 
-
-        Åbner URL fra produktet
+        //Åbner URL fra produktet
         if (SettingsScript.openInApp == false)
         {
             Application.OpenURL(ProductUrl);
