@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Threading;
-using UnityEngine;
-
+﻿using UnityEngine;
 
 public class ProductUrlHandler : MonoBehaviour
 {
@@ -30,8 +27,12 @@ public class ProductUrlHandler : MonoBehaviour
         }
         else if (SettingsScript.openInApp == true)
         {
-            // Åben i app
-            // https://forum.unity.com/threads/android-ios-launch-from-within-a-unity-app-another-unity-app.222709/
+            GameObject popupWindow2 = Resources.Load<GameObject>("Prefabs/PopupWindow2");
+            //instansier i scenen og brug prefabets gemte position
+            GameObject tempWindow2 = Instantiate(popupWindow2, popupWindow2.transform.position, Quaternion.identity) as GameObject;
+            //Find canvas fra ARcamera og sæt popupvinduet som child - popup vinduet vises ikke hvis det ikke er i et canvas
+            tempWindow2.transform.SetParent(GameObject.Find("MenuCanvas").transform, false);
+            Destroy(tempWindow2, 3f);
         }
     }
     public void OpenProductUrl()
