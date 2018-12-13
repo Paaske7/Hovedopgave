@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="QRCode4" size="5.500000 5.610887" />
-    <ImageTarget name="QRCode3" size="5.500000 5.757447" />
-    <ImageTarget name="QRCode2" size="5.500000 5.434263" />
-    <ImageTarget name="QRCode1" size="5.500000 5.522177" />
+    <ImageTarget name="QRCode4" size="5.500000 5.586275" />
+    <ImageTarget name="QRCode3" size="5.500000 5.736052" />
+    <ImageTarget name="QRCode2" size="5.500000 5.478261" />
+    <ImageTarget name="QRCode1" size="5.500000 5.436047" />
   </Tracking>
 </QCARConfig>
