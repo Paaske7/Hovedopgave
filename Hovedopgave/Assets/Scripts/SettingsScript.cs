@@ -12,28 +12,64 @@ public class SettingsScript : MonoBehaviour {
     public GameObject showSexText;
     public GameObject ønskeskyenText;
     public GameObject tutorialText;
+
     public Slider changeSexSlider;
+    public Image backgroundchangeSexSlider;
+
+    public Slider changeWebSiteSlider;
+    public Image backggroundchangeWebSiteSlider;
+
+    public Slider changeTutorial;
+    public Image backgroundchangeTutorial;
 
     public void Start()
     {
+        // Finder alle de nødvendige gameobjekter i scenen 
         canvas = GameObject.Find("SettingsCanvas");
         showSexText = canvas.transform.Find("ShowSexText").gameObject;
         ønskeskyenText = canvas.transform.Find("ShowØnskeskyenText").gameObject;
         tutorialText = canvas.transform.Find("ShowToturialText").gameObject;
-        changeSexSlider = GameObject.Find("ChangeSexSlider").GetComponent<Slider>();
 
-        if (isMale == true)
-        {
-            changeSexSlider.value = 1;
-            showSexText.GetComponent<Text>().text = "Mand";
-        }
-        else if (isMale == false)
-        {
-            changeSexSlider.value = 0;
-            showSexText.GetComponent<Text>().text = "Kvinde";
-        }
+        changeSexSlider = GameObject.Find("ChangeSexSlider").GetComponent<Slider>();
+        backgroundchangeSexSlider = GameObject.FindGameObjectWithTag("background").GetComponent<Image>();
+
+        changeWebSiteSlider = GameObject.Find("ØnskeskyenSlider").GetComponent<Slider>();
+        backggroundchangeWebSiteSlider = GameObject.FindGameObjectWithTag("backgground2").GetComponent<Image>();
+
+        changeTutorial = GameObject.Find("TutorialSlider").GetComponent<Slider>();
+        backgroundchangeTutorial = GameObject.FindGameObjectWithTag("backgground3").GetComponent<Image>();
     }
 
+    public void Update()
+    {
+        // Ændrer farve på gameobjektet alt efter hvilken tekst der står ovenover
+        if (showSexText.GetComponent<Text>().text == "Mand")
+        {
+            backgroundchangeSexSlider.color = Color.blue;
+        }
+        else
+        {
+            backgroundchangeSexSlider.color = Color.red;
+        }
+
+        if (tutorialText.GetComponent<Text>().text == "Vis")
+        {
+            backgroundchangeTutorial.color = Color.blue;
+        }
+        else
+        {
+            backgroundchangeTutorial.color = Color.red;
+        }
+
+        if (ønskeskyenText.GetComponent<Text>().text == "Vis")
+        {
+            backggroundchangeWebSiteSlider.color = Color.blue;
+        }
+        else
+        {
+            backggroundchangeWebSiteSlider.color = Color.red;
+        }
+    }
     public void ChangeSex()
     {
         // Hvis slider bliver rykket til den ene ende, bliver boolen sat til det modsatte af før
@@ -43,11 +79,12 @@ public class SettingsScript : MonoBehaviour {
         if (isMale == true)
         {
             showSexText.GetComponent<Text>().text = "Mand";
+       
         }
         else if (isMale == false)
         {
             showSexText.GetComponent<Text>().text = "Kvinde";
-            PlayerPrefs.SetInt("hej", 0);
+           
         }
     }
 
@@ -64,6 +101,7 @@ public class SettingsScript : MonoBehaviour {
         else if (showTutorial == false)
         {
             tutorialText.GetComponent<Text>().text = "Vis ikke";
+            backgroundchangeTutorial.color = Color.blue;
         }  
     }
     public void WishList()
@@ -79,6 +117,7 @@ public class SettingsScript : MonoBehaviour {
         else if (openInApp == false)
         {
             ønskeskyenText.GetComponent<Text>().text = "Hjemmeside";
+            backggroundchangeWebSiteSlider.color = Color.blue;
         }
     }
 }

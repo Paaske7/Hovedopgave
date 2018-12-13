@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - tutorial
+  - background
+  - backgground2
+  - backgground3
   layers:
   - Default
   - TransparentFX

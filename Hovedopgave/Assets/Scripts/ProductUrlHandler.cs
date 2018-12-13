@@ -60,18 +60,19 @@ public class ProductUrlHandler : MonoBehaviour
         try
         {
             launchIntent = packageManager.Call<AndroidJavaObject>("getLaunchIntentForPackage", bundleId);
+            ca.Call("startActivity", launchIntent);
         }
-        catch (System.Exception e)
+        catch (System.Exception)
         {
-            fail = true;
+            Application.OpenURL("https://google.com");
         }
 
         if (fail)
         { //open app in store
-            Application.OpenURL("https://google.com");
+            
         }
         else //open the app
-            ca.Call("startActivity", launchIntent);
+            
 
         up.Dispose();
         ca.Dispose();
