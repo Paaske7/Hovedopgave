@@ -13,6 +13,7 @@ public class MenuCanvas : MonoBehaviour {
     private GameObject ClothScannerButton;
     private GameObject showroomButton;
     private GameObject settingsButton;
+    private GameObject panel;
     private Scene currentScene;
 
 
@@ -21,10 +22,11 @@ public class MenuCanvas : MonoBehaviour {
     void Start () {
         // Finder gameobjekter i scenen
         canvas = GameObject.Find("MenuCanvas");
-        homeButton = canvas.transform.Find("HomeButton").gameObject;
-        ClothScannerButton = canvas.transform.Find("ClothScannerButton").gameObject;
-        showroomButton = canvas.transform.Find("ShowroomButton").gameObject;
-        settingsButton = canvas.transform.Find("SettingsButton").gameObject;
+        panel = canvas.transform.Find("Panel").gameObject;
+        homeButton = panel.transform.Find("HomeButton").gameObject;
+        ClothScannerButton = panel.transform.Find("ClothScannerButton").gameObject;
+        showroomButton = panel.transform.Find("ShowroomButton").gameObject;
+        settingsButton = panel.transform.Find("SettingsButton").gameObject;
 
     }
 	

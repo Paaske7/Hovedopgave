@@ -3,7 +3,7 @@
 public class MoveModel : MonoBehaviour {
 
     // Mikael Paaske
-    float speed = 6.0f;
+    float speed = 12.0f;
     // Opretter et array, hvor alle modeller er inde i.
     public GameObject[] respawns;
 

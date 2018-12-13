@@ -16,7 +16,7 @@ public class MainMenuScript : MonoBehaviour {
     void Start () {
 
         // Finder gameobjekter i scenen
-        canvas = GameObject.Find("MenuCanvas");
+        canvas = GameObject.Find("Canvas");
         welcome = canvas.transform.Find("WelcomeText").gameObject;
         newsText1 = canvas.transform.Find("NewsText1").gameObject;
         newsText2 = canvas.transform.Find("NewsText2").gameObject;
