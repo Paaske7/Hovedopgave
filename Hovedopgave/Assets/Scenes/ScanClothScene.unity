@@ -3692,7 +3692,11 @@ Transform:
   m_Children:
   - {fileID: 713624864}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 2108390298}
+=======
+  - {fileID: 1451340603}
+>>>>>>> parent of 6897836... scanner navn og pris sat i portræt -qr1
 =======
   - {fileID: 1451340603}
 >>>>>>> parent of 6897836... scanner navn og pris sat i portræt -qr1
