@@ -43,29 +43,19 @@ public class SettingsScript : MonoBehaviour {
     public void Update()
     {
         // Ændrer farve på gameobjektet alt efter hvilken tekst der står ovenover
-        if (showSexText.GetComponent<Text>().text == "Mand")
-        {
-            backgroundchangeSexSlider.color = Color.blue;
-        }
-        else
+        if (showSexText.GetComponent<Text>().text == "Kvinde")
         {
             backgroundchangeSexSlider.color = Color.red;
         }
 
-        if (tutorialText.GetComponent<Text>().text == "Vis")
-        {
-            backgroundchangeTutorial.color = Color.blue;
-        }
-        else
+
+        if (tutorialText.GetComponent<Text>().text == "Vis ikke")
         {
             backgroundchangeTutorial.color = Color.red;
         }
 
-        if (ønskeskyenText.GetComponent<Text>().text == "Vis")
-        {
-            backggroundchangeWebSiteSlider.color = Color.blue;
-        }
-        else
+
+        if (ønskeskyenText.GetComponent<Text>().text == "Hjemmeside")
         {
             backggroundchangeWebSiteSlider.color = Color.red;
         }
