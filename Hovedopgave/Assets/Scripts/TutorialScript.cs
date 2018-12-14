@@ -46,17 +46,19 @@ public class TutorialScript : MonoBehaviour
             item.SetActive(false);
         }
     }
-    //// Fjerner kun GameObjekter der har en Box Collider
-    //void Update()
-    //{
-    //    if (Input.GetMouseButtonDown(0))
-    //    {
-    //        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-    //        RaycastHit hit;
-    //        if (Physics.Raycast(ray, out hit))
-    //        {
-    //            Destroy(hit.transform.gameObject);
-    //        }
-    //    }
-    //}
+
+
+    // Fjerner kun GameObjekter der har en Box Collider
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+            {
+                Destroy(hit.transform.gameObject);
+            }
+        }
+    }
 }
