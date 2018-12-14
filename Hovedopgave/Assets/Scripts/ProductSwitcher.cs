@@ -26,10 +26,21 @@ public class ProductSwitcher : MonoBehaviour
 
     public void ShowCatalog()
     {
-        if (SettingsScript.isMale)
-            maleCatalog.SetActive(true);
-        else
-            femaleCatalog.SetActive(true);
+        // Tjekker om male og female catalog er aktiv i scenen
+        if (maleCatalog.activeSelf || femaleCatalog.activeSelf) 
+        {
+            // Hvis de aktiv, sæt dem inaktiv
+            maleCatalog.SetActive(false);
+            femaleCatalog.SetActive(false);
+        }
+        else 
+        {
+            // Eller sæt dem aktiv
+            if (SettingsScript.isMale)
+                maleCatalog.SetActive(true);
+            else
+                femaleCatalog.SetActive(true);
+        }
     }
 
     private void DestroyAll()
