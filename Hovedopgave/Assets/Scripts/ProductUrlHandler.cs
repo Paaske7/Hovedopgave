@@ -64,7 +64,7 @@ public class ProductUrlHandler : MonoBehaviour
         }
         catch (System.Exception)
         {
-            Application.OpenURL("https://google.com");
+            Application.OpenURL("https://play.google.com/store/apps/details?id=com.ovdal.onskeskyen&hl=da");
         }
 
         if (fail)
