@@ -29,18 +29,18 @@ public class ShowData : MonoBehaviour
         //For hvert tekstfelt (Name, Price, Description og Fabrics) findes den pågældende UI element i scenen
         //Teksten i UI elementet bliver sat til informationen fra databasen
         //Hvis der ikke er nogen information på en property f.eks. Name bliver UI teksten istedet sat til 'Ikke oplyst'
-        nameTextField = GameObject.Find("QRCode1_Name").GetComponent<Text>();
+        nameTextField = GameObject.Find("QR_Name").GetComponent<Text>();
         nameTextField.text = (clothesInfoList[0].Name).Equals(string.Empty) ? "Ikke oplyst" : clothesInfoList[0].Name;
 
 
-        PriceTextField = GameObject.Find("QRCode1_Price").GetComponent<Text>();
+        PriceTextField = GameObject.Find("QR_Price").GetComponent<Text>();
         PriceTextField.text = (clothesInfoList[0].Price.Equals(string.Empty) ? "Ikke oplyst" :  clothesInfoList[0].Price+" kroner");
 
-        DescriptionTextField = GameObject.Find("QRCode1_Description").GetComponent<Text>();
+        DescriptionTextField = GameObject.Find("QR_Description").GetComponent<Text>();
         DescriptionTextField.text = (clothesInfoList[0].Description.Equals(string.Empty) ? "Ikke oplyst" : clothesInfoList[0].Description);
 
         //Ud fra 4 felter i databasen der har information om fabrics tilføjes disse til UI-teksten med linieskift hvis ikke de er tomme
-        FabricTextField1 = GameObject.Find("QRCode1_Fabrics").GetComponent<Text>();
+        FabricTextField1 = GameObject.Find("QR_Fabrics").GetComponent<Text>();
         FabricTextField1.text = (clothesInfoList[0].Fabric1.Equals(string.Empty) ? "Ikke oplyst" : "-" + clothesInfoList[0].Fabric1) + 
                                 (clothesInfoList[0].Fabric2.Equals(string.Empty) ? "" : "\n -"+ clothesInfoList[0].Fabric2)+
                                 (clothesInfoList[0].Fabric3.Equals(string.Empty) ? "" : "\n -" + clothesInfoList[0].Fabric3)+
@@ -60,18 +60,18 @@ public class ShowData : MonoBehaviour
         //For hvert tekstfelt (Name, Price, Description og Fabrics) findes den pågældende UI element i scenen
         //Teksten i UI elementet bliver sat til informationen fra databasen
         //Hvis der ikke er nogen information på en property f.eks. Name bliver UI teksten istedet sat til 'Ikke oplyst'
-        nameTextField = GameObject.Find("QRCode2_Name").GetComponent<Text>();
+        nameTextField = GameObject.Find("QR_Name").GetComponent<Text>();
         nameTextField.text = (clothesInfoList[0].Name).Equals(string.Empty) ? "Ikke oplyst" : clothesInfoList[0].Name;
 
 
-        PriceTextField = GameObject.Find("QRCode2_Price").GetComponent<Text>();
+        PriceTextField = GameObject.Find("QR_Price").GetComponent<Text>();
         PriceTextField.text = (clothesInfoList[0].Price.Equals(string.Empty) ? "Ikke oplyst" : clothesInfoList[0].Price + " kroner");
 
-        DescriptionTextField = GameObject.Find("QRCode2_Description").GetComponent<Text>();
+        DescriptionTextField = GameObject.Find("QR_Description").GetComponent<Text>();
         DescriptionTextField.text = (clothesInfoList[0].Description.Equals(string.Empty) ? "Ikke oplyst" : clothesInfoList[0].Description);
 
         //Ud fra 4 felter i databasen der har information om fabrics tilføjes disse til UI-teksten med linieskift hvis ikke de er tomme
-        FabricTextField1 = GameObject.Find("QRCode2_Fabrics").GetComponent<Text>();
+        FabricTextField1 = GameObject.Find("QR_Fabrics").GetComponent<Text>();
         FabricTextField1.text = (clothesInfoList[0].Fabric1.Equals(string.Empty) ? "Ikke oplyst" : "-" + clothesInfoList[0].Fabric1) +
                                 (clothesInfoList[0].Fabric2.Equals(string.Empty) ? "" : "\n -" + clothesInfoList[0].Fabric2) +
                                 (clothesInfoList[0].Fabric3.Equals(string.Empty) ? "" : "\n -" + clothesInfoList[0].Fabric3) +
@@ -92,17 +92,17 @@ public class ShowData : MonoBehaviour
         //For hvert tekstfelt (Name, Price, Description og Fabrics) findes den pågældende UI element i scenen
         //Teksten i UI elementet bliver sat til informationen fra databasen
         //Hvis der ikke er nogen information på en property f.eks. Name bliver UI teksten istedet sat til 'Ikke oplyst'
-        nameTextField = GameObject.Find("QRCode3_Name").GetComponent<Text>();
+        nameTextField = GameObject.Find("QR_Name").GetComponent<Text>();
         nameTextField.text = (clothesInfoList[0].Name).Equals(string.Empty) ? "Ikke oplyst" : clothesInfoList[0].Name;
 
-        PriceTextField = GameObject.Find("QRCode3_Price").GetComponent<Text>();
+        PriceTextField = GameObject.Find("QR_Price").GetComponent<Text>();
         PriceTextField.text = (clothesInfoList[0].Price.Equals(string.Empty) ? "Ikke oplyst" : clothesInfoList[0].Price + " kroner");
 
-        DescriptionTextField = GameObject.Find("QRCode3_Description").GetComponent<Text>();
+        DescriptionTextField = GameObject.Find("QR_Description").GetComponent<Text>();
         DescriptionTextField.text = (clothesInfoList[0].Description.Equals(string.Empty) ? "Ikke oplyst" : clothesInfoList[0].Description);
 
         //Ud fra 4 felter i databasen der har information om fabrics tilføjes disse til UI-teksten med linieskift hvis ikke de er tomme
-        FabricTextField1 = GameObject.Find("QRCode3_Fabrics").GetComponent<Text>();
+        FabricTextField1 = GameObject.Find("QR_Fabrics").GetComponent<Text>();
         FabricTextField1.text = (clothesInfoList[0].Fabric1.Equals(string.Empty) ? "Ikke oplyst" : "-" + clothesInfoList[0].Fabric1) +
                                 (clothesInfoList[0].Fabric2.Equals(string.Empty) ? "" : "\n -" + clothesInfoList[0].Fabric2) +
                                 (clothesInfoList[0].Fabric3.Equals(string.Empty) ? "" : "\n -" + clothesInfoList[0].Fabric3) +
@@ -123,18 +123,18 @@ public class ShowData : MonoBehaviour
         //For hvert tekstfelt (Name, Price, Description og Fabrics) findes den pågældende UI element i scenen
         //Teksten i UI elementet bliver sat til informationen fra databasen
         //Hvis der ikke er nogen information på en property f.eks. Name bliver UI teksten istedet sat til 'Ikke oplyst'
-        nameTextField = GameObject.Find("QRCode4_Name").GetComponent<Text>();
+        nameTextField = GameObject.Find("QR_Name").GetComponent<Text>();
         nameTextField.text = (clothesInfoList[0].Name).Equals(string.Empty) ? "Ikke oplyst" : clothesInfoList[0].Name;
 
 
-        PriceTextField = GameObject.Find("QRCode4_Price").GetComponent<Text>();
+        PriceTextField = GameObject.Find("QR_Price").GetComponent<Text>();
         PriceTextField.text = (clothesInfoList[0].Price.Equals(string.Empty) ? "Ikke oplyst" : clothesInfoList[0].Price + " kroner");
 
-        DescriptionTextField = GameObject.Find("QRCode4_Description").GetComponent<Text>();
+        DescriptionTextField = GameObject.Find("QR_Description").GetComponent<Text>();
         DescriptionTextField.text = (clothesInfoList[0].Description.Equals(string.Empty) ? "Ikke oplyst" : clothesInfoList[0].Description);
 
         //Ud fra 4 felter i databasen der har information om fabrics tilføjes disse til UI-teksten med linieskift hvis ikke de er tomme
-        FabricTextField1 = GameObject.Find("QRCode4_Fabrics").GetComponent<Text>();
+        FabricTextField1 = GameObject.Find("QR_Fabrics").GetComponent<Text>();
         FabricTextField1.text = (clothesInfoList[0].Fabric1.Equals(string.Empty) ? "Ikke oplyst" : "-" + clothesInfoList[0].Fabric1) +
                                 (clothesInfoList[0].Fabric2.Equals(string.Empty) ? "" : "\n -" + clothesInfoList[0].Fabric2) +
                                 (clothesInfoList[0].Fabric3.Equals(string.Empty) ? "" : "\n -" + clothesInfoList[0].Fabric3) +

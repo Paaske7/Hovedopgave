@@ -2395,11 +2395,11 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1033027095}
+      objectReference: {fileID: 0}
     - target: {fileID: 114885847754172802, guid: 0c463e76d40acd54d9bf56c850ac0c60,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: changemenuscenePoseScene
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114707378773433866, guid: 0c463e76d40acd54d9bf56c850ac0c60,
         type: 2}

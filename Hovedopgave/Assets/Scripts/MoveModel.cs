@@ -3,7 +3,7 @@
 public class MoveModel : MonoBehaviour {
 
     // Mikael Paaske
-    float speed = 50.0f;
+    float rotation = 45.0f;
     // Opretter et array, hvor alle modeller er inde i.
     public GameObject[] respawns;
 
@@ -15,7 +15,7 @@ public class MoveModel : MonoBehaviour {
             // Finder alle modeller og rykker dem til højre
             respawns = GameObject.FindGameObjectsWithTag("Respawn");
 
-            respawns[0].transform.Rotate(Vector3.up * speed);
+            respawns[0].transform.Rotate(Vector3.up * rotation);
         }
     }
 
@@ -27,7 +27,7 @@ public class MoveModel : MonoBehaviour {
             // Finder alle modeller og rykker dem til højre
             respawns = GameObject.FindGameObjectsWithTag("Respawn");
 
-            respawns[0].transform.Rotate(Vector3.down * speed);
+            respawns[0].transform.Rotate(Vector3.down * rotation);
         }
     }
 }

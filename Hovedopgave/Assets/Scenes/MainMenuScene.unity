@@ -299,7 +299,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 797976222}
+      objectReference: {fileID: 0}
     - target: {fileID: 114494690261557624, guid: 0c463e76d40acd54d9bf56c850ac0c60,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -314,6 +314,11 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: changemenuscenePoseScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114518571576023618, guid: 0c463e76d40acd54d9bf56c850ac0c60,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c463e76d40acd54d9bf56c850ac0c60, type: 2}
