@@ -38,22 +38,22 @@ public class MenuCanvas : MonoBehaviour {
         // Ændrer farven på knapperne på canvaset ud fra hvilken scene der er valgt
         if (currentScene.name == "MainMenuScene")
         {
-            homeButton.GetComponent<Image>().color = Color.red;
+            homeButton.GetComponent<Image>().color = Color.grey;
         }
 
         else if (currentScene.name == "ScanClothScene")
         {
-            ClothScannerButton.GetComponent<Image>().color = Color.red;
+            ClothScannerButton.GetComponent<Image>().color = Color.grey;
         }
 
         else if (currentScene.name == "ShowroomScene")
         {
-            showroomButton.GetComponent<Image>().color = Color.red;
+            showroomButton.GetComponent<Image>().color = Color.grey;
         }
 
         else if (currentScene.name == "SettingsScene")
         {
-            settingsButton.GetComponent<Image>().color = Color.red;
+            settingsButton.GetComponent<Image>().color = Color.grey;
         }
     }
 }
