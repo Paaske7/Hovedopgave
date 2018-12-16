@@ -15,7 +15,7 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
     protected TrackableBehaviour.Status m_PreviousStatus;
     protected TrackableBehaviour.Status m_NewStatus;
     ShowData showData;
-    private GameObject QRIcon;
+    public GameObject QRIcon;
     #endregion
 
     #region UNITY_MONOBEHAVIOUR_METHODS
@@ -87,11 +87,8 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
         foreach (var component in canvasComponents)
             component.enabled = true;
         
-        if (GameObject.Find("ScanIcon") != null)
-        {
-            QRIcon = GameObject.Find("ScanIcon");
             QRIcon.SetActive(false);
-        }
+        
         // Kalder database udfra hvilken Image Target den finder i Vuforias database
         if (mTrackableBehaviour.TrackableName == "QRCode1")
         {
