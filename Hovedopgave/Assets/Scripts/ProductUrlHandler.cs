@@ -66,12 +66,6 @@ public class ProductUrlHandler : MonoBehaviour
         {
             Application.OpenURL("https://play.google.com/store/apps/details?id=com.ovdal.onskeskyen&hl=da");
         }
-
-        if (fail)
-        { //open app in store
-            
-        }
-        else //open the app
             
 
         up.Dispose();

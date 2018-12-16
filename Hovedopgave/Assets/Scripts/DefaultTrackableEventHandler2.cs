@@ -9,10 +9,11 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
     // Vuforias egen kode hvor Mikael har tilføjet logik
     #region PROTECTED_MEMBER_VARIABLES
     protected TrackableBehaviour mTrackableBehaviour;
-   
+
+    public GameObject canvas;
+
     protected TrackableBehaviour.Status m_PreviousStatus;
     protected TrackableBehaviour.Status m_NewStatus;
-
     ShowData showData;
     private GameObject QRIcon;
     #endregion
@@ -71,6 +72,8 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
 
     protected virtual void OnTrackingFound()
     {
+        canvas.SetActive(true);
+
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);
         var canvasComponents = GetComponentsInChildren<Canvas>(true);
@@ -126,6 +129,8 @@ public class DefaultTrackableEventHandler2 : MonoBehaviour, ITrackableEventHandl
 
         foreach (var component in canvasComponents)
             component.enabled = false;
+        canvas.SetActive(false);
+        QRIcon.SetActive(true);
     }
         #endregion 
 }

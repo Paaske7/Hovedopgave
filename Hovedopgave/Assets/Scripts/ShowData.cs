@@ -15,6 +15,7 @@ public class ShowData : MonoBehaviour
     public Text PriceTextField;
     public Text FabricTextField1;
 
+
     public void Start()
     {
         _productUrlHandler = GameObject.Find("GameController").GetComponent<ProductUrlHandler>();
