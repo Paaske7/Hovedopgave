@@ -9,9 +9,10 @@ public class SettingsScript : MonoBehaviour {
     public static bool openInApp;
 
     public GameObject canvas;
+
     public GameObject showSexText;
-    public GameObject ønskeskyenText;
-    public GameObject tutorialText;
+    public GameObject showØnskeskyenText;
+    public GameObject showTutorialText;
 
     public Slider changeSexSlider;
     public Image backgroundchangeSexSlider;
@@ -19,8 +20,8 @@ public class SettingsScript : MonoBehaviour {
     public Slider changeWebSiteSlider;
     public Image backggroundchangeWebSiteSlider;
 
-    public Slider changeTutorial;
-    public Image backgroundchangeTutorial;
+    public Slider changeTutorialSlider;
+    public Image backgroundchangeTutorialSlider;
 
     public void Start()
     {
@@ -28,8 +29,8 @@ public class SettingsScript : MonoBehaviour {
         canvas = GameObject.Find("SettingsCanvas");
 
         showSexText = canvas.transform.Find("ShowSexText").gameObject;
-        ønskeskyenText = canvas.transform.Find("ShowØnskeskyenText").gameObject;
-        tutorialText = canvas.transform.Find("ShowToturialText").gameObject;
+        showØnskeskyenText = canvas.transform.Find("ShowØnskeskyenText").gameObject;
+        showTutorialText = canvas.transform.Find("ShowToturialText").gameObject;
 
         changeSexSlider = GameObject.Find("ChangeSexSlider").GetComponent<Slider>();
         backgroundchangeSexSlider = GameObject.FindGameObjectWithTag("background").GetComponent<Image>();
@@ -37,8 +38,8 @@ public class SettingsScript : MonoBehaviour {
         changeWebSiteSlider = GameObject.Find("ØnskeskyenSlider").GetComponent<Slider>();
         backggroundchangeWebSiteSlider = GameObject.FindGameObjectWithTag("backgground2").GetComponent<Image>();
 
-        changeTutorial = GameObject.Find("TutorialSlider").GetComponent<Slider>();
-        backgroundchangeTutorial = GameObject.FindGameObjectWithTag("backgground3").GetComponent<Image>();
+        changeTutorialSlider = GameObject.Find("TutorialSlider").GetComponent<Slider>();
+        backgroundchangeTutorialSlider = GameObject.FindGameObjectWithTag("backgground3").GetComponent<Image>();
 
         if (isMale == true)
         {
@@ -53,24 +54,24 @@ public class SettingsScript : MonoBehaviour {
 
         if (openInApp == true)
         {
-            ønskeskyenText.GetComponent<Text>().text = "App";
+            showØnskeskyenText.GetComponent<Text>().text = "App";
             changeWebSiteSlider.value = 1;
         }
         else if (openInApp == false)
         {
-            ønskeskyenText.GetComponent<Text>().text = "Hjemmeside";
+            showØnskeskyenText.GetComponent<Text>().text = "Hjemmeside";
             changeWebSiteSlider.value = 0;
         }
 
         if (showTutorial == true)
         {
-            tutorialText.GetComponent<Text>().text = "Vis";
-            changeTutorial.value = 1;
+            showTutorialText.GetComponent<Text>().text = "Vis";
+            changeTutorialSlider.value = 1;
         }
         else if (showTutorial == false)
         {
-            tutorialText.GetComponent<Text>().text = "Vis Ikke";
-            changeTutorial.value = 0;
+            showTutorialText.GetComponent<Text>().text = "Vis Ikke";
+            changeTutorialSlider.value = 0;
         }
     }
 
@@ -83,13 +84,13 @@ public class SettingsScript : MonoBehaviour {
         }
 
 
-        if (tutorialText.GetComponent<Text>().text == "Vis Ikke")
+        if (showTutorialText.GetComponent<Text>().text == "Vis ikke")
         {
-            backgroundchangeTutorial.color = Color.red;
+            backgroundchangeTutorialSlider.color = Color.red;
         }
 
 
-        if (ønskeskyenText.GetComponent<Text>().text == "Hjemmeside")
+        if (showØnskeskyenText.GetComponent<Text>().text == "Hjemmeside")
         {
             backggroundchangeWebSiteSlider.color = Color.red;
         }
@@ -113,12 +114,12 @@ public class SettingsScript : MonoBehaviour {
     {
         if (openInAppFloat == 1)
         {
-            ønskeskyenText.GetComponent<Text>().text = "App";
+            showØnskeskyenText.GetComponent<Text>().text = "App";
             openInApp = true;
         }
         else if (openInAppFloat == 0)
         {
-            ønskeskyenText.GetComponent<Text>().text = "Hjemmeside";
+            showØnskeskyenText.GetComponent<Text>().text = "Hjemmeside";
             openInApp = false;
         }
       
@@ -128,12 +129,12 @@ public class SettingsScript : MonoBehaviour {
     {
         if (showTutorialFloat == 1)
         {
-            tutorialText.GetComponent<Text>().text = "Vis";
+            showTutorialText.GetComponent<Text>().text = "Vis";
             showTutorial = true;
         }
         else if (showTutorialFloat == 0)
         {
-            tutorialText.GetComponent<Text>().text = "Vis ikke";
+            showTutorialText.GetComponent<Text>().text = "Vis ikke";
             showTutorial = false;
         }
     }
