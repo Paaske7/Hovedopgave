@@ -26,6 +26,7 @@ public class SettingsScript : MonoBehaviour {
     {
         // Finder alle de nødvendige gameobjekter i scenen 
         canvas = GameObject.Find("SettingsCanvas");
+
         showSexText = canvas.transform.Find("ShowSexText").gameObject;
         ønskeskyenText = canvas.transform.Find("ShowØnskeskyenText").gameObject;
         tutorialText = canvas.transform.Find("ShowToturialText").gameObject;
@@ -38,6 +39,39 @@ public class SettingsScript : MonoBehaviour {
 
         changeTutorial = GameObject.Find("TutorialSlider").GetComponent<Slider>();
         backgroundchangeTutorial = GameObject.FindGameObjectWithTag("backgground3").GetComponent<Image>();
+
+        if (isMale == true)
+        {
+            showSexText.GetComponent<Text>().text = "Mand";
+            changeSexSlider.value = 1;
+        }
+        else if (isMale == false)
+        {
+            showSexText.GetComponent<Text>().text = "Kvinde";
+            changeSexSlider.value = 0;
+        }
+
+        if (openInApp == true)
+        {
+            ønskeskyenText.GetComponent<Text>().text = "App";
+            changeWebSiteSlider.value = 1;
+        }
+        else if (openInApp == false)
+        {
+            ønskeskyenText.GetComponent<Text>().text = "Hjemmeside";
+            changeWebSiteSlider.value = 0;
+        }
+
+        if (showTutorial == true)
+        {
+            tutorialText.GetComponent<Text>().text = "Vis";
+            changeTutorial.value = 1;
+        }
+        else if (showTutorial == false)
+        {
+            tutorialText.GetComponent<Text>().text = "Vis Ikke";
+            changeTutorial.value = 0;
+        }
     }
 
     public void Update()
@@ -49,7 +83,7 @@ public class SettingsScript : MonoBehaviour {
         }
 
 
-        if (tutorialText.GetComponent<Text>().text == "Vis ikke")
+        if (tutorialText.GetComponent<Text>().text == "Vis Ikke")
         {
             backgroundchangeTutorial.color = Color.red;
         }
@@ -60,54 +94,47 @@ public class SettingsScript : MonoBehaviour {
             backggroundchangeWebSiteSlider.color = Color.red;
         }
     }
-    public void ChangeSex()
+    public void ChangeSex(float changeSexFloat)
     {
-        // Hvis slider bliver rykket til den ene ende, bliver boolen sat til det modsatte af før
-        isMale = !isMale;
-        Debug.Log(isMale);
-        // Ændrer gameobjektets tekst til det modsatte efter slideren er rykket
-        if (isMale == true)
+        if (changeSexFloat == 1)
         {
             showSexText.GetComponent<Text>().text = "Mand";
-       
+            isMale = true;
         }
-        else if (isMale == false)
+        else if (changeSexFloat == 0)
         {
             showSexText.GetComponent<Text>().text = "Kvinde";
-           
+            isMale = false;
         }
     }
 
-    public void ShowToturial()
+   
+    public void WishList(float openInAppFloat)
     {
-        // Hvis slider bliver rykket til den ene ende, bliver boolen sat til det modsatte af før
-        showTutorial = !showTutorial;
-
-        // Ændrer gameobjektets tekst ud fra boolen er sand eller falsk
-        if (showTutorial == true)
-        {
-            tutorialText.GetComponent<Text>().text = "Vis";
-        }
-        else if (showTutorial == false)
-        {
-            tutorialText.GetComponent<Text>().text = "Vis ikke";
-            backgroundchangeTutorial.color = Color.blue;
-        }  
-    }
-    public void WishList()
-    {
-        // Hvis slider bliver rykket til den ene ende, bliver boolen sat til det modsatte af før
-        openInApp = !openInApp;
-
-        // Ændrer gameobjektets tekst ud fra boolen er sand eller falsk
-        if (openInApp == true)
+        if (openInAppFloat == 1)
         {
             ønskeskyenText.GetComponent<Text>().text = "App";
+            openInApp = true;
         }
-        else if (openInApp == false)
+        else if (openInAppFloat == 0)
         {
             ønskeskyenText.GetComponent<Text>().text = "Hjemmeside";
-            backggroundchangeWebSiteSlider.color = Color.blue;
+            openInApp = false;
+        }
+      
+    }
+
+    public void ShowToturial(float showTutorialFloat)
+    {
+        if (showTutorialFloat == 1)
+        {
+            tutorialText.GetComponent<Text>().text = "Vis";
+            showTutorial = true;
+        }
+        else if (showTutorialFloat == 0)
+        {
+            tutorialText.GetComponent<Text>().text = "Vis ikke";
+            showTutorial = false;
         }
     }
 }
