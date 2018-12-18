@@ -10,8 +10,6 @@ public class MainMenuScript : MonoBehaviour {
     private GameObject canvas;
 
     private GameObject newsText1;
-    private GameObject newsText2;
-    private GameObject newsText3;
 
     void Start () {
 

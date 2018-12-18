@@ -10,7 +10,6 @@ public class ShowData : MonoBehaviour
     private Database DB;
 
     public Text DescriptionTextField;
-
     public Text nameTextField;
     public Text PriceTextField;
     public Text FabricTextField1;

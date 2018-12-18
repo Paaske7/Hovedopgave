@@ -84,7 +84,7 @@ public class SettingsScript : MonoBehaviour {
         }
 
 
-        if (showTutorialText.GetComponent<Text>().text == "Vis ikke")
+        if (showTutorialText.GetComponent<Text>().text == "Vis Ikke")
         {
             backgroundchangeTutorialSlider.color = Color.red;
         }
