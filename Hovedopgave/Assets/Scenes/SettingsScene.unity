@@ -563,8 +563,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 330, y: 383}
-  m_SizeDelta: {x: 160, y: 50}
+  m_AnchoredPosition: {x: 343, y: 383}
+  m_SizeDelta: {x: 330, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &727389398
 MonoBehaviour:
@@ -1024,14 +1024,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
   showSexText: {fileID: 0}
-  "\xF8nskeskyenText": {fileID: 0}
-  tutorialText: {fileID: 0}
+  "show\xD8nskeskyenText": {fileID: 0}
+  showTutorialText: {fileID: 0}
   changeSexSlider: {fileID: 0}
   backgroundchangeSexSlider: {fileID: 0}
   changeWebSiteSlider: {fileID: 0}
   backggroundchangeWebSiteSlider: {fileID: 0}
-  changeTutorial: {fileID: 0}
-  backgroundchangeTutorial: {fileID: 0}
+  changeTutorialSlider: {fileID: 0}
+  backgroundchangeTutorialSlider: {fileID: 0}
 --- !u!114 &1072108847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1169,7 +1169,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.18431373, g: 0.18431373, b: 0.18431373, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
